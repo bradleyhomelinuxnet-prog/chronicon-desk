@@ -1,0 +1,1804 @@
+{
+  "clocks": [
+    {
+      "id": "annus-mundi",
+      "name": "Annus Mundi",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": -3894,
+        "month": null,
+        "day": null
+      },
+      "formula": "Era count, years elapsed since 3895 BC. JS: am = astro + 3894 (astro = astronomical year, 1 BC = 0). Source comment also: AM = 3895 - (BC year). Anchors: 2022 CE -> 5916; 2239 BC -> 1656; 2026 -> 5920; AM 6000 = 2106 CE. Flag: isPalindrome(am).",
+      "unitLabels": [
+        "AM"
+      ],
+      "description": "The Ancient-World count from the 3895 BC poleshift - the calendar's Year One. Flood node AM 1656; AM 6000 in 2106 CE.",
+      "source": "chronicon-clocks-calendrics.txt:485,634,648-649 (srcdoc TIME MODEL, render 'Annus Mundi'); Chronicon_Engine_v2.html:640,790,806-807"
+    },
+    {
+      "id": "cataclysm-era",
+      "name": "Cataclysm Era",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": -5238,
+        "month": null,
+        "day": null
+      },
+      "formula": "Years since the Nemesis Cataclysm of 5239 BC. JS: cat = astro + 5238. Meta note: 7-cycle Nemesis frame = 5544 yr (792x7).",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "Years since the Nemesis Cataclysm of 5239 BC, when the binary broke apart.",
+      "source": "chronicon-clocks-calendrics.txt:371,634,652-653; Chronicon_Engine_v2.html:396,790,810-811"
+    },
+    {
+      "id": "phoenix-138",
+      "name": "Phoenix · Sky Dragon",
+      "periodYears": 138,
+      "periodDays": null,
+      "epoch": {
+        "year": -4308,
+        "month": null,
+        "day": null
+      },
+      "formula": "Strict 138-yr lattice; node where mod(astro,138) === 108; node #1 = 4309 BC (PHX = {mod:108, step:138, base:-4308}). JS: pPrev = astro - mod(astro-108,138); pNext = pPrev + 138; pInto = astro - pPrev; pTo = pNext - astro; pIdx = Math.round((pPrev - PHX.base)/138) + 1; bar = pInto/138*100. mod(n,m) = ((n%m)+m)%m. Multiples: 138x3=414 'cursed time', 138x4=552 'Phoenix cycles', 138x46=6348 (4309 BC -> 2040 CE).",
+      "unitLabels": [
+        "node",
+        "yr to node"
+      ],
+      "description": "The 138-year reset cycle - the recurring destroyer Breshears named; due 15 May 2040. Node #1 = 4309 BC; nodes 1902, 2040, 2178.",
+      "source": "chronicon-clocks-calendrics.txt:503,642,656-662,463; Chronicon_Engine_v2.html:369,659,799,814-820,615"
+    },
+    {
+      "id": "nemesis-x-792",
+      "name": "Nemesis X Object",
+      "periodYears": 792,
+      "periodDays": null,
+      "epoch": {
+        "year": 462,
+        "month": null,
+        "day": null
+      },
+      "formula": "792-yr orbit: enters inner system when mod(astro-462,792) === 0, inside for 60 yr, outside 732 yr (NEM_ENTER = {mod:462, step:792}). JS: offset = mod(astro-462,792); inner = offset < 60; enterPrev = astro - offset; enterNext = enterPrev + 792; exit = enterPrev + 60; if inner: yrsLeft = 60 - offset, bar = offset/60*100; else: yrsToReturn = enterNext - astro, bar = (astro - (enterPrev+60))/732*100. Ledger marker: txt uses offset<60, v2 uses offset<=60.",
+      "unitLabels": [
+        "yr inside",
+        "yr to return"
+      ],
+      "description": "The 792-year orbit of the dark companion - 60 yr inside Sol, 732 without; returns 2046.",
+      "source": "chronicon-clocks-calendrics.txt:504,664-680,606; Chronicon_Engine_v2.html:376,660,822-838,762"
+    },
+    {
+      "id": "ner-600",
+      "name": "Anunnaki NER",
+      "periodYears": 600,
+      "periodDays": null,
+      "epoch": {
+        "year": -5238,
+        "month": null,
+        "day": null
+      },
+      "formula": "600-yr epochs phased on astro 162 (NER = {mod:162, step:600, base:-5238}; 5239 BC start). JS: nerOff = mod(astro-162,600); nerStart = astro - nerOff; nerNum = Math.floor((astro - NER.base)/600) + 1; next = nerStart + 600; bar = nerOff/600*100. Each 600-yr NER = ten 60-yr decans. 762 CE = 6000th NER year.",
+      "unitLabels": [
+        "PERIOD",
+        "decan"
+      ],
+      "description": "The 600-year regnal epochs of the Anunna kings - ten 60-year decans apiece. 762 CE falls on the 6000th NER year.",
+      "source": "chronicon-clocks-calendrics.txt:505,682-688,951; Chronicon_Engine_v2.html:383,661,840-846"
+    },
+    {
+      "id": "mayan-long-count",
+      "name": "Mayan Long-Count",
+      "periodYears": 5158,
+      "periodDays": 1872000,
+      "epoch": {
+        "year": -3112,
+        "month": null,
+        "day": null
+      },
+      "formula": "Hard-coded baktun boundaries MAY_NODES = [-3112,-2712,-2312,-1912,-1512,-1112,-712,-318,76,470,864,1258,1652,2046] (six 400-yr spans, then seven 394-yr spans after -712). Find bi with MAY_NODES[bi] <= astro < MAY_NODES[bi+1]; label 'BAKTUN '+(bi+1)+'/13'; span = bEnd - bStart; into = astro - bStart; yrsToNext = bEnd - astro; before -3112 = PRE-COUNT; v2: astro >= 2046 -> '13.0.0.0.0 complete'. Long-Count year: lc = astro + 3112 (2026 -> 5138; 2046 -> 5158). Sigil flag (v2): lc > 0 && String(lc).indexOf('138') >= 0.",
+      "unitLabels": [
+        "baktun",
+        "13.0.0.0.0",
+        "LC year"
+      ],
+      "description": "Thirteen baktuns of 144,000 days from 3113 BC, closing at 13.0.0.0.0 in 2046. 2026 = LC 5138.",
+      "source": "chronicon-clocks-calendrics.txt:506,690-700,1045-1049; Chronicon_Engine_v2.html:402,662,793,803,848-859,1252-1279"
+    },
+    {
+      "id": "metonic-19",
+      "name": "Lunar Clock · Metonic recursion",
+      "periodYears": 19,
+      "periodDays": null,
+      "epoch": {
+        "year": 2026,
+        "month": 5,
+        "day": 30
+      },
+      "formula": "19 yr = 235 lunations (235/19 = 12.368 moons/yr). Flag: mod(REF - astro, 19) === 0 where REF = 2026 (txt) or TODAY.y (v2). Cycle count: yd = REF - astro; yd >= 0 ? Math.floor(yd/19)+' back' : Math.abs(Math.floor(yd/19))+' ahead'.",
+      "unitLabels": [
+        "Metonic cycle",
+        "lunation"
+      ],
+      "description": "The 19-year Metonic gear - after 235 lunations the moon returns to the same phase on the same date.",
+      "source": "chronicon-clocks-calendrics.txt:426,467,643,726,862-863; Chronicon_Engine_v2.html:428-429,800,885-886,936-937"
+    },
+    {
+      "id": "lunar-synodic",
+      "name": "Moon phase (continuous synodic model)",
+      "periodYears": null,
+      "periodDays": 29.530588853,
+      "epoch": {
+        "year": 2000,
+        "month": 1,
+        "day": 6
+      },
+      "formula": "SYN = 29.530588853; NEWMOON_J2000 = 2451550.1 (2000-01-06 18:14 UT). J = jdn(astro,m,d) (proleptic Gregorian: a=floor((14-m)/12); y=astro+4800-a; mm=m+12a-3; J = d+floor((153mm+2)/5)+365y+floor(y/4)-floor(y/100)+floor(y/400)-32045). age = mod(J - NEWMOON_J2000, SYN); frac = age/SYN; illum = (1-cos(2*PI*frac))/2; phaseIdx = floor(mod(frac+1/16,1)*8)%8 over [New, Waxing Crescent, First Quarter, Waxing Gibbous, Full, Waning Gibbous, Last Quarter, Waning Crescent]; lunation (txt) = Math.round((J-2423436.40347)/SYN), (v2) = Math.floor((J-2423436.40347)/SYN)+1; moonsFromToday = Math.round((TODAY_JD - J)/SYN).",
+      "unitLabels": [
+        "d",
+        "lunation #"
+      ],
+      "description": "Moon age, illumination and lunation number from a J2000 new-moon epoch; deep-past phases are cycle-true rather than historically observed.",
+      "source": "chronicon-clocks-calendrics.txt:487-498,711-727,849-865; Chronicon_Engine_v2.html:642-654,870-889,923-939"
+    },
+    {
+      "id": "anunna-turnings",
+      "name": "Anunna Reckoning · šar = a turning of the stars",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": -3894,
+        "month": 1,
+        "day": 1
+      },
+      "formula": "šar = one day (a turning). JS: AM_EPOCH = jdn(-3894,1,1); turns = J - AM_EPOCH; T = |turns|; Draconian yr = T/360; NER = T/216000; baktun = T/144000; nodes: T===432000 'antediluvian total', T===864000 'Foundation of Time', T%144000===0 'n x baktun'. 432,000 = 3 baktuns = 1,200 Draconian yr; 864,000 = 6 baktuns = 2,400 Draconian yr; Enoch 300 yr = 108,000 turnings.",
+      "unitLabels": [
+        "turnings",
+        "Draconian yr",
+        "NER",
+        "baktun"
+      ],
+      "description": "Counts turnings (days) since AM Year One, 3895 BC, read in Draconian measures: 360 = 1 Draconian yr, 216,000 = 1 NER, 144,000 = 1 baktun.",
+      "source": "Chronicon_Engine_v2.html:361-362,994,1003-1012,1334-1344,623-625 (v2 only)"
+    },
+    {
+      "id": "phoenix-countdown",
+      "name": "Phoenix Countdown · 15 May 2040",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 2040,
+        "month": 5,
+        "day": 15
+      },
+      "formula": "Live: ms = Date.UTC(2040,4,15,0,0,0) - now; days = floor(ms/86400000); flags days%138===0 '÷138 today', days%19===0 '÷19 today'; also yrsTo(y) = ((Date.UTC(y,0,1)-Date.now())/3.15576e10).toFixed(1) for 2046 and 2178. After target: 'ARRIVED'.",
+      "unitLabels": [
+        "d",
+        "hh:mm:ss"
+      ],
+      "description": "Live count to the 2040 reset - calls it out whenever the days remaining fall on a multiple of 19 or 138.",
+      "source": "Chronicon_Engine_v2.html:470-473,1095,1116-1124; chronicon-clocks-calendrics.txt:888-893 (liveTick, unused)"
+    },
+    {
+      "id": "giza-apparent-solar",
+      "name": "Giza Apparent Solar · the true sun",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "lon = 31.1342; utcH = h + m/60 + s/3600; B = 2*PI*(dayOfYear-81)/364; EoT = 9.87*sin(2B) - 7.53*cos(B) - 1.5*sin(B) (minutes); solarH = ((utcH + lon/15 + EoT/60) % 24 + 24) % 24.",
+      "unitLabels": [
+        "hh:mm:ss",
+        "EoT min"
+      ],
+      "description": "Sundial time over the pyramid's own meridian, corrected by the equation of time.",
+      "source": "Chronicon_Engine_v2.html:452-455,1110-1115"
+    },
+    {
+      "id": "cairo-civil",
+      "name": "Cairo · Giza Plateau",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Intl.DateTimeFormat timeZone 'Africa/Cairo'; offset read from shortOffset (default 2); label EEST if UTC+3 else EET. Meta: 30.0°N 31.1°E.",
+      "unitLabels": [
+        "hh:mm:ss"
+      ],
+      "description": "Civil time where the Great Pyramid stands - the stone this whole instrument reads.",
+      "source": "Chronicon_Engine_v2.html:446-449,1100-1104"
+    },
+    {
+      "id": "utc",
+      "name": "UTC · Zulu",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "now.getUTCHours/Minutes/Seconds.",
+      "unitLabels": [
+        "hh:mm:ss"
+      ],
+      "description": "Coordinated Universal Time - the world's reference clock.",
+      "source": "Chronicon_Engine_v2.html:458-461,1106-1107"
+    },
+    {
+      "id": "local-meridian",
+      "name": "Your meridian · local",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "now.getHours/Minutes/Seconds; zone from Intl resolvedOptions().timeZone.",
+      "unitLabels": [
+        "hh:mm:ss"
+      ],
+      "description": "This device's own time zone, wherever you are reading from.",
+      "source": "Chronicon_Engine_v2.html:464-467,1108-1109"
+    },
+    {
+      "id": "solar-year-length",
+      "name": "Solar Year · day-length",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "leap = (astro%4===0) && (astro%100!==0 || astro%400===0); days = leap ? 366 : 365. Note: the Draconian/Anunna year was 360 turnings.",
+      "unitLabels": [
+        "days"
+      ],
+      "description": "Length of the dialed year - 365 or 366; the Anunna/Draconian year was 360.",
+      "source": "Chronicon_Engine_v2.html:482-485,1014-1016"
+    },
+    {
+      "id": "hebrew-anno-mundi",
+      "name": "Hebrew · Anno Mundi",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": -3760,
+        "month": null,
+        "day": null
+      },
+      "formula": "hy = Intl year (calendar 'hebrew'); metonicYr = mod(hy,19) || 19; leap13 = mod(7*hy+1,19) < 7; hgap = (astro+3894) - hy (Archaix AM minus Hebrew AM; flagged when hgap%19===0). Epoch stated as 3761 BC, 134 yr after Year One (133 after Rosh Hashanah).",
+      "unitLabels": [
+        "AM",
+        "Metonic yr /19"
+      ],
+      "description": "Rabbinic world-era, built on the same 19-year Metonic gear as the moon.",
+      "source": "Chronicon_Engine_v2.html:488-491,1018-1022"
+    },
+    {
+      "id": "coptic",
+      "name": "Coptic · Church of Egypt",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 284,
+        "month": null,
+        "day": null
+      },
+      "formula": "Intl calendar 'coptic' (year = first digit-run). Year of the Martyrs from 284 CE.",
+      "unitLabels": [
+        "Year of the Martyrs"
+      ],
+      "description": "The Egyptian church's count from the Year of the Martyrs, 284 CE.",
+      "source": "Chronicon_Engine_v2.html:494-497,1024-1025"
+    },
+    {
+      "id": "egyptian-civil-nabonassar",
+      "name": "Egyptian Civil · Nabonassar",
+      "periodYears": null,
+      "periodDays": 365,
+      "epoch": null,
+      "formula": "ed = J - 1448638; year = floor(ed/365)+1; doy = mod(ed,365); month = floor(doy/30) (Thoth..Mesore, 12 x 30) else epagomenae; day = mod(doy,30)+1.",
+      "unitLabels": [
+        "Nabonassar yr",
+        "Thoth..Mesore",
+        "epagomenae"
+      ],
+      "description": "The ancient 365-day wandering year that drifts a full turn every Sothic 1460.",
+      "source": "Chronicon_Engine_v2.html:500-503,1027-1030"
+    },
+    {
+      "id": "sothic",
+      "name": "Sothic cycle",
+      "periodYears": 1460,
+      "periodDays": null,
+      "epoch": {
+        "year": 139,
+        "month": null,
+        "day": null
+      },
+      "formula": "v2: sothicPos = mod(astro - 139, 1460) + '/1460'. MANUAL constant OPH_SOTHIC = 1461 (years), no position formula.",
+      "unitLabels": [
+        "/1460"
+      ],
+      "description": "The Egyptian civil year drifts a full turn every Sothic 1460 (v2). MANUAL lists OPH_SOTHIC = 1461 years.",
+      "source": "Chronicon_Engine_v2.html:501,1030,1346; natorion/MANUAL.md:331"
+    },
+    {
+      "id": "mayan-calendar-round",
+      "name": "Mayan Calendar Round",
+      "periodYears": 52,
+      "periodDays": 18980,
+      "epoch": null,
+      "formula": "ld = J - 584283; tzolkin = (mod(ld+3,13)+1) + ' ' + tzNm[mod(ld+19,20)]; hp = mod(ld+348,365); haabMonth = floor(hp/20) (Pop..Kumku, 18) else Wayeb; haabDay = mod(hp,20). Round 52 yr / 18,980 d (260-day Tzolkin x 365-day Haab).",
+      "unitLabels": [
+        "Tzolkin",
+        "Haab",
+        "Wayeb"
+      ],
+      "description": "The 52-year meshing of the 260-day Tzolkin and 365-day Haab.",
+      "source": "Chronicon_Engine_v2.html:506-509,1032-1037"
+    },
+    {
+      "id": "julian-calendar",
+      "name": "Julian Calendar · Old Style",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "fromJDJulian(J): c=J+32082; d=floor((4c+3)/1461); e=c-floor(1461d/4); m=floor((5e+2)/153); day=e-floor((153m+2)/5)+1; month=m+3-12*floor(m/10); year=d-4800+floor(m/10). gap = J - jdn(julian y,m,d) days behind Gregorian.",
+      "unitLabels": [
+        "Old Style"
+      ],
+      "description": "Caesar's calendar - now 13 days behind Gregorian.",
+      "source": "Chronicon_Engine_v2.html:512-515,989,1039-1041"
+    },
+    {
+      "id": "julian-day",
+      "name": "Julian Day · raw count",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "J = jdn(astro,m,d) (proleptic Gregorian JDN, see lunar-synodic). Flags palindromic day; next palindrome JDN.",
+      "unitLabels": [
+        "JDN"
+      ],
+      "description": "The astronomer's continuous day-number since 4713 BC.",
+      "source": "Chronicon_Engine_v2.html:518-521,1043-1045"
+    },
+    {
+      "id": "islamic-hijri",
+      "name": "Islamic · Hijri",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 622,
+        "month": null,
+        "day": null
+      },
+      "formula": "Intl calendar 'islamic'.",
+      "unitLabels": [
+        "AH"
+      ],
+      "description": "The Muslim lunar year, ~354 days, from 622 CE.",
+      "source": "Chronicon_Engine_v2.html:524-527,1047-1048"
+    },
+    {
+      "id": "persian-solar-hijri",
+      "name": "Persian · Solar Hijri",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 622,
+        "month": null,
+        "day": null
+      },
+      "formula": "Intl calendar 'persian'. Meta: 'from 622 CE'.",
+      "unitLabels": [
+        "Solar Hijri"
+      ],
+      "description": "The most astronomically accurate solar calendar in use.",
+      "source": "Chronicon_Engine_v2.html:530-533,1050-1051"
+    },
+    {
+      "id": "indian-saka",
+      "name": "Indian National · Saka",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 78,
+        "month": null,
+        "day": null
+      },
+      "formula": "Intl calendar 'indian'.",
+      "unitLabels": [
+        "Saka"
+      ],
+      "description": "India's civil calendar, epoch 78 CE.",
+      "source": "Chronicon_Engine_v2.html:536-539,1053-1054"
+    },
+    {
+      "id": "buddhist-era",
+      "name": "Buddhist Era",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "be = astro + 543.",
+      "unitLabels": [
+        "BE"
+      ],
+      "description": "Theravada count - CE + 543.",
+      "source": "Chronicon_Engine_v2.html:542-545,1056-1057"
+    },
+    {
+      "id": "ethiopic",
+      "name": "Ethiopic",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Intl calendar 'ethiopic' (Amete Mihret).",
+      "unitLabels": [
+        "Amete Mihret"
+      ],
+      "description": "Thirteen months, ~7-8 years behind Gregorian.",
+      "source": "Chronicon_Engine_v2.html:548-551,1059-1060"
+    },
+    {
+      "id": "chinese-sexagenary",
+      "name": "Chinese · sexagenary",
+      "periodYears": 60,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "ci = mod(astro-4,60); stem = st[mod(ci,10)] (Jia..Gui); branch = br[mod(ci,12)] (Zi..Hai); element = el[mod(ci,10)]; animal = an[mod(ci,12)]; yr = ci+1 of 60; 'approx at Jan'.",
+      "unitLabels": [
+        "stem",
+        "branch",
+        "element",
+        "animal"
+      ],
+      "description": "The 60-year cycle of stem, branch, element and zodiac animal.",
+      "source": "Chronicon_Engine_v2.html:554-557,1062-1068"
+    },
+    {
+      "id": "byzantine-world-era",
+      "name": "Byzantine · Old Russian",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": -5508,
+        "month": 9,
+        "day": 1
+      },
+      "formula": "year = m >= 9 ? astro + 5509 : astro + 5508.",
+      "unitLabels": [
+        "AM"
+      ],
+      "description": "The creation world-era from 1 Sept 5509 BC.",
+      "source": "Chronicon_Engine_v2.html:560-563,1070-1071"
+    },
+    {
+      "id": "kali-yuga",
+      "name": "Kali Yuga · Vedic",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": -3101,
+        "month": null,
+        "day": null
+      },
+      "formula": "ky = astro + 3101.",
+      "unitLabels": [
+        "Kali Yuga yr"
+      ],
+      "description": "The Hindu dark age, begun 3102 BC.",
+      "source": "Chronicon_Engine_v2.html:566-569,1073-1075; ledger -3102"
+    },
+    {
+      "id": "holocene",
+      "name": "Holocene · Human Era",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "he = astro + 10000.",
+      "unitLabels": [
+        "HE"
+      ],
+      "description": "CE + 10,000 - counting from the dawn of settlement.",
+      "source": "Chronicon_Engine_v2.html:572-575,1077-1079"
+    },
+    {
+      "id": "french-republican",
+      "name": "French Republican",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 1792,
+        "month": 9,
+        "day": 22
+      },
+      "formula": "fJD = J - 2375839; if fJD < 1 'pre-Republic'; fy = floor((fJD-1)/365.2422)+1; fdoy = floor(fJD-1-(fy-1)*365.2422); month = floor(fdoy/30) (Vendemiaire..Fructidor) else Sansculottides; day = mod(fdoy,30)+1. Approximate.",
+      "unitLabels": [
+        "An",
+        "month"
+      ],
+      "description": "The Revolution's decimal calendar of 1793 (approximate).",
+      "source": "Chronicon_Engine_v2.html:578-581,1081-1088"
+    },
+    {
+      "id": "unix",
+      "name": "Unix · machine time",
+      "periodYears": null,
+      "periodDays": null,
+      "epoch": {
+        "year": 1970,
+        "month": 1,
+        "day": 1
+      },
+      "formula": "ux = Math.round(dt.getTime()/1000).",
+      "unitLabels": [
+        "s"
+      ],
+      "description": "Seconds elapsed since 1 Jan 1970.",
+      "source": "Chronicon_Engine_v2.html:584-587,1090-1092"
+    },
+    {
+      "id": "saros",
+      "name": "Saros eclipse cycle",
+      "periodYears": 18.03,
+      "periodDays": 6585.3211,
+      "epoch": null,
+      "formula": "Constant only: OPH_SAROS = 6585.3211 days (18.03 years). No epoch or position formula in the sources.",
+      "unitLabels": [
+        "d"
+      ],
+      "description": "The Saros eclipse cycle, in days (18.03 years). Natorion equation constant.",
+      "source": "natorion/MANUAL.md:324"
+    },
+    {
+      "id": "inex",
+      "name": "Inex eclipse cycle",
+      "periodYears": 28.94,
+      "periodDays": 10571.95,
+      "epoch": null,
+      "formula": "Constant only: OPH_INEX = 10571.95 days (28.94 years). No epoch or position formula.",
+      "unitLabels": [
+        "d"
+      ],
+      "description": "The Inex eclipse cycle, in days (28.94 years). Natorion equation constant.",
+      "source": "natorion/MANUAL.md:325"
+    },
+    {
+      "id": "precession",
+      "name": "Precession of the equinoxes",
+      "periodYears": 25772,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Constant only: OPH_PRECESSION = 25772 years. v2 prose: '72 years - one precessional degree'. No epoch or position formula.",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "One precession of the equinoxes, in years (MANUAL). v2 prose calls 72 years one precessional degree.",
+      "source": "natorion/MANUAL.md:332; Chronicon_Engine_v2.html:1342"
+    },
+    {
+      "id": "jupiter-saturn",
+      "name": "Jupiter-Saturn great conjunction",
+      "periodYears": 19.86,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Constant only: OPH_JUPSAT = 19.86 years.",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "Jupiter-Saturn great conjunction, in years. Natorion equation constant.",
+      "source": "natorion/MANUAL.md:333"
+    },
+    {
+      "id": "jupiter-return",
+      "name": "Jupiter return",
+      "periodYears": 11.862,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Constant only: OPH_JUPITER = 11.862 years.",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "Jupiter return, in years. Natorion equation constant.",
+      "source": "natorion/MANUAL.md:335"
+    },
+    {
+      "id": "saturn-return",
+      "name": "Saturn return",
+      "periodYears": 29.4571,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Constant only: OPH_SATURN = 29.4571 years.",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "Saturn return, in years. Natorion equation constant.",
+      "source": "natorion/MANUAL.md:334"
+    },
+    {
+      "id": "uranus-return",
+      "name": "Uranus return",
+      "periodYears": 84.0205,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Constant only: OPH_URANUS = 84.0205 years.",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "Uranus return, in years. Natorion equation constant.",
+      "source": "natorion/MANUAL.md:336"
+    },
+    {
+      "id": "chiron-return",
+      "name": "Chiron return",
+      "periodYears": 50.42,
+      "periodDays": null,
+      "epoch": null,
+      "formula": "Constant only: OPH_CHIRON = 50.42 years.",
+      "unitLabels": [
+        "yr"
+      ],
+      "description": "Chiron return, in years. Natorion equation constant.",
+      "source": "natorion/MANUAL.md:337"
+    },
+    {
+      "id": "year-lengths",
+      "name": "Year lengths (tropical / sidereal / anomalistic / ideal)",
+      "periodYears": null,
+      "periodDays": 365.24219,
+      "epoch": null,
+      "formula": "Constants only: OPH_YEAR_TROPICAL = 365.24219 d; OPH_YEAR_SIDEREAL = 365.256363 d; OPH_YEAR_ANOMALISTIC = 365.259636 d; OPH_YEAR_IDEAL = 360 d ('the ideal year of the thesis'). periodDays holds the tropical value.",
+      "unitLabels": [
+        "d"
+      ],
+      "description": "Year-length constants; OPH_YEAR_IDEAL = 360 is the ideal year of the thesis (the Draconian year of 360 turnings in v2).",
+      "source": "natorion/MANUAL.md:327-330"
+    }
+  ],
+  "bodies": [
+    {
+      "id": "nemesis-x",
+      "name": "Nemesis X Object",
+      "aliases": [
+        "Nemesis X",
+        "the dark companion",
+        "intruder world",
+        "Tiamat (ledger -1914: 'Tiamat passes')"
+      ],
+      "periodYears": 792,
+      "lastPassages": [
+        {
+          "year": -3438,
+          "note": "Gihon Flood — a third of mankind dies; ENKI arrives with the Anunna; Nemesis X Passover"
+        },
+        {
+          "year": -2646,
+          "note": "Nemesis X Object departs Sol — begins 732 yr away; Anunna Exodus / 408-yr Shock Period"
+        },
+        {
+          "year": -1914,
+          "note": "Nemesis X returns — Tiamat passes, blackness swallows the stars (32nd yr of Nimrod)"
+        },
+        {
+          "year": -1854,
+          "note": "60th year of Nemesis inner transit — Sumer vanishes, Akkad rises"
+        },
+        {
+          "year": -1122,
+          "note": "Nemesis X returned — China records an attack on the sun, Shang collapse"
+        },
+        {
+          "year": -330,
+          "note": "Nemesis X returns — Moon dims, sky blood-red; Alexander takes Babylon"
+        },
+        {
+          "year": -270,
+          "note": "Nemesis X totally eclipses Venus on its way out (recorded by the Ptolemies)"
+        },
+        {
+          "year": 462,
+          "note": "Nemesis X enters inner system; Statue of Zeus destroyed"
+        },
+        {
+          "year": 1254,
+          "note": "Nemesis X returns — 7th Crusade fails; England–Scotland war lasts the exact 60-yr transit"
+        },
+        {
+          "year": 1314,
+          "note": "60th yr of transit — plague fogs, black darkness over Europe; Black Death follows"
+        }
+      ],
+      "nextPassages": [
+        {
+          "year": 2046,
+          "note": "Nemesis X returns — \"Time collapses,\" 16-hr days; Mayan 13.0.0.0.0"
+        },
+        {
+          "year": 2106,
+          "note": "Nemesis X exits the system — Annus Mundi 6000"
+        }
+      ],
+      "description": "792-year orbit: 60 years inside Sol, 732 without. Enters the inner system when mod(astro-462,792)=0; returns 2046, exits 2106.",
+      "source": "chronicon-clocks-calendrics.txt:384,504,664-680 + ledger; Chronicon_Engine_v2.html:375-376,660,822-838; 14-domain-and-style.md:144"
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "aliases": [
+        "Sky Dragon",
+        "Fenris (ledger 2040)"
+      ],
+      "periodYears": 138,
+      "lastPassages": [
+        {
+          "year": -4308,
+          "note": "Phoenix named (Trimorphic Protennoia); 930-yr Adamu civilization destroyed, dust hides the sun"
+        },
+        {
+          "year": -3894,
+          "note": "Lithospheric displacement, 30° poleshift — New Heavens & New Earth; YEAR ONE of the Ancient calendar"
+        },
+        {
+          "year": -2652,
+          "note": "Sitchin’s major disaster recorded in Near East texts"
+        },
+        {
+          "year": -2238,
+          "note": "THE GREAT FLOOD — May, Annus Mundi 1656; Vapor Canopy collapse, Birth of the Sun"
+        },
+        {
+          "year": -1962,
+          "note": "Temporary poleshift, quakes, bodies of water moved"
+        },
+        {
+          "year": -1686,
+          "note": "The Ogygian Flood — 25-yr darkness & famine, Heliolithic empire collapses"
+        },
+        {
+          "year": -1548,
+          "note": "Three suns shone, sun dimmed, red sky, tsunamis"
+        },
+        {
+          "year": -1410,
+          "note": "Temporary poleshift; new star; sky bloody red; Israel born / Conquest of Canaan"
+        },
+        {
+          "year": -1272,
+          "note": "Atreus predicts sun-darkening; sky bloody red (Seneca, Euripides, Mursilis II)"
+        },
+        {
+          "year": -1134,
+          "note": "Cataclysm — Mediterranean Dark Age begins, Linear B collapses"
+        },
+        {
+          "year": -996,
+          "note": "Large meteorite impact, North America (Badlands)"
+        },
+        {
+          "year": -858,
+          "note": "Phoenix symbol on Assyrian relief of King Jehu"
+        },
+        {
+          "year": -720,
+          "note": "Kingdom of Israel falls to Assyria; sun & moon darkened, flames in sky"
+        },
+        {
+          "year": -582,
+          "note": "Thales predicts the darkening of the sun, in May"
+        },
+        {
+          "year": -444,
+          "note": "deJonge’s comet disaster, widespread fires"
+        },
+        {
+          "year": -306,
+          "note": "Oera Lindh text records disasters across Europe"
+        },
+        {
+          "year": -30,
+          "note": "31 BC — continental quake Aegean→Judea during Battle of Actium; sky dragon over Egypt"
+        },
+        {
+          "year": 246,
+          "note": "Bloody sword in the sky, rain of blood (old Briton annal)"
+        },
+        {
+          "year": 384,
+          "note": "Bloody pillar in the sky (Lycosthenes, Chronicon)"
+        },
+        {
+          "year": 522,
+          "note": "ONLY year Phoenix & Nemesis X are in the inner system together — \"celestial war of monsters,\" Dark Ages begin"
+        },
+        {
+          "year": 798,
+          "note": "Quakes, dark sun, flooding in Mayan cities"
+        },
+        {
+          "year": 1212,
+          "note": "Mass human vanishings; quakes in the Middle East"
+        },
+        {
+          "year": 1488,
+          "note": "Mother Shipton born — prophesies the 2040 return of the Sky Dragon"
+        },
+        {
+          "year": 1626,
+          "note": "Chinese record sun-darkening, meteoritic rain"
+        },
+        {
+          "year": 1764,
+          "note": "Astronomer Hoffman watches a dark object cross 1/5 of the sun, seen by millions"
+        },
+        {
+          "year": 1902,
+          "note": "Unknown star, quakes, red rains — Charles Fort’s \"other Dark Age\"; Tuxtla Statuette found"
+        }
+      ],
+      "nextPassages": [
+        {
+          "year": 2040,
+          "note": "15/16 MAY — Phoenix darkens the sun; lithospheric displacement; 6th Seal, Black Sun, Fenris"
+        },
+        {
+          "year": 2178,
+          "note": "Simulation Collapse — 138 yr after the 2040 reset; exodus into the Real universe"
+        }
+      ],
+      "description": "The recurring planetary destroyer Breshears named, on a strict 138-year lattice (node: mod(astro,138)=108). Next visitation 15 May 2040.",
+      "source": "chronicon-clocks-calendrics.txt:377,503,949,1080 + ledger; Chronicon_Engine_v2.html:368-369,1318"
+    },
+    {
+      "id": "nemesis",
+      "name": "Nemesis",
+      "aliases": [
+        "the binary",
+        "dead Nemesis system"
+      ],
+      "periodYears": null,
+      "lastPassages": [
+        {
+          "year": -5238,
+          "note": "Nemesis Cataclysm — Nemesis implodes; Earth, Luna, Phoenix, Nemesis X & Electra hurled toward Sol"
+        }
+      ],
+      "nextPassages": [],
+      "description": "The companion whose implosion in 5239 BC (the Nemesis Cataclysm) starts the Cataclysm Era; Luna is said to arrive from the dead Nemesis system.",
+      "source": "chronicon-clocks-calendrics.txt:511,514; Chronicon_Engine_v2.html:396"
+    },
+    {
+      "id": "electra",
+      "name": "Electra",
+      "aliases": [],
+      "periodYears": null,
+      "lastPassages": [
+        {
+          "year": -5238,
+          "note": "Nemesis Cataclysm — ... Electra hurled toward Sol"
+        }
+      ],
+      "nextPassages": [],
+      "description": "Fifth body hurled toward Sol at the Cataclysm. No period or further passages given in the sources.",
+      "source": "chronicon-clocks-calendrics.txt:511"
+    },
+    {
+      "id": "nibiru",
+      "name": "Nibiru",
+      "aliases": [],
+      "periodYears": null,
+      "lastPassages": [],
+      "nextPassages": [],
+      "description": "Not defined in any assigned source file. See openQuestions for where the name does appear.",
+      "source": "none of the assigned files (grep: chronicon-clocks-calendrics.txt, Chronicon_Engine_v2.html, chronicon.html, DOMAIN.md, 20-chronicon-source.md, WHITEPAPER.md, 14-domain-and-style.md, MANUAL.md)"
+    }
+  ],
+  "calendricDates": [
+    {
+      "year": -5238,
+      "month": null,
+      "day": null,
+      "title": "Nemesis Cataclysm — Nemesis implodes; Earth, Luna, Phoenix, Nemesis X & Electra hurled toward Sol",
+      "clockIds": [
+        "cataclysm-era",
+        "ner-600"
+      ],
+      "note": "5239 BC · AM -1344 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:511 / Chronicon_Engine_v2.html:667 (event ledger E)"
+    },
+    {
+      "year": -4638,
+      "month": null,
+      "day": null,
+      "title": "Earth captured in orbit around Sol — exactly 600 yr after the Cataclysm",
+      "clockIds": [
+        "ner-600"
+      ],
+      "note": "4639 BC · AM -744 · ledger kind 'ner'",
+      "source": "chronicon-clocks-calendrics.txt:512 / Chronicon_Engine_v2.html:668 (event ledger E)"
+    },
+    {
+      "year": -4308,
+      "month": null,
+      "day": null,
+      "title": "Phoenix named (Trimorphic Protennoia); 930-yr Adamu civilization destroyed, dust hides the sun",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "4309 BC · AM -414 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:513 / Chronicon_Engine_v2.html:669 (event ledger E)"
+    },
+    {
+      "year": -4038,
+      "month": null,
+      "day": null,
+      "title": "Capture of Luna — the Capture Flood; Moon arrives from the dead Nemesis system",
+      "clockIds": [],
+      "note": "4039 BC · AM -144 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:514 / Chronicon_Engine_v2.html:670 (event ledger E)"
+    },
+    {
+      "year": -3894,
+      "month": null,
+      "day": null,
+      "title": "Lithospheric displacement, 30° poleshift — New Heavens & New Earth; YEAR ONE of the Ancient calendar",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "3895 BC · AM 0 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:515 / Chronicon_Engine_v2.html:671 (event ledger E)"
+    },
+    {
+      "year": -3438,
+      "month": null,
+      "day": null,
+      "title": "Gihon Flood — a third of mankind dies; ENKI arrives with the Anunna; Nemesis X Passover",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "3439 BC · AM 456 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:516 / Chronicon_Engine_v2.html:672 (event ledger E)"
+    },
+    {
+      "year": -3372,
+      "month": null,
+      "day": null,
+      "title": "Olmec calendar begins",
+      "clockIds": [],
+      "note": "3373 BC · AM 522 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:517 / Chronicon_Engine_v2.html:673 (event ledger E)"
+    },
+    {
+      "year": -3112,
+      "month": null,
+      "day": null,
+      "title": "Impact in North America — Maya Long-Count 0.0.0.0.0 begins the countdown",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "3113 BC · AM 782 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:518 / Chronicon_Engine_v2.html:674 (event ledger E)"
+    },
+    {
+      "year": -3102,
+      "month": null,
+      "day": null,
+      "title": "Vedic Kali Yuga calendar begun",
+      "clockIds": [
+        "kali-yuga"
+      ],
+      "note": "3103 BC · AM 792 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:519 / Chronicon_Engine_v2.html:675 (event ledger E)"
+    },
+    {
+      "year": -2974,
+      "month": null,
+      "day": null,
+      "title": "Long-Count sigil rung LC 138 (AM 920)",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "2975 BC; seventy years before the first stone of Giza",
+      "source": "Chronicon_Engine_v2.html:1270"
+    },
+    {
+      "year": -2908,
+      "month": null,
+      "day": null,
+      "title": "Enoch vanishes into the sky",
+      "clockIds": [],
+      "note": "2909 BC · AM 986 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:520 / Chronicon_Engine_v2.html:676 (event ledger E)"
+    },
+    {
+      "year": -2904,
+      "month": null,
+      "day": null,
+      "title": "Great Pyramid first stone set (AM 990)",
+      "clockIds": [
+        "annus-mundi"
+      ],
+      "note": "2905 BC; 666 years before the Flood; 90-year raising",
+      "source": "chronicon-clocks-calendrics.txt:964,970,1127"
+    },
+    {
+      "year": -2838,
+      "month": null,
+      "day": null,
+      "title": "Noah born",
+      "clockIds": [
+        "annus-mundi"
+      ],
+      "note": "2839 BC · AM 1056 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:521 / Chronicon_Engine_v2.html:677 (event ledger E)"
+    },
+    {
+      "year": -2814,
+      "month": null,
+      "day": null,
+      "title": "Great Pyramid of Giza built at Achuzan, where Enoch vanished",
+      "clockIds": [],
+      "note": "2815 BC · AM 1080 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:522 / Chronicon_Engine_v2.html:678 (event ledger E)"
+    },
+    {
+      "year": -2814,
+      "month": null,
+      "day": null,
+      "title": "Great Pyramid capstone set (AM 1080)",
+      "clockIds": [
+        "annus-mundi"
+      ],
+      "note": "2815 BC; also ledger row -2814; stands 576 years",
+      "source": "chronicon-clocks-calendrics.txt:963-964,1128"
+    },
+    {
+      "year": -2712,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun (144,000 days) ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "2713 BC · AM 1182 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:523 / Chronicon_Engine_v2.html:679 (event ledger E)"
+    },
+    {
+      "year": -2652,
+      "month": null,
+      "day": null,
+      "title": "Sitchin’s major disaster recorded in Near East texts",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "2653 BC · AM 1242 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:524 / Chronicon_Engine_v2.html:680 (event ledger E)"
+    },
+    {
+      "year": -2646,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X Object departs Sol — begins 732 yr away; Anunna Exodus / 408-yr Shock Period",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "2647 BC · AM 1248 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:525 / Chronicon_Engine_v2.html:681 (event ledger E)"
+    },
+    {
+      "year": -2312,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "2313 BC · AM 1582 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:526 / Chronicon_Engine_v2.html:682 (event ledger E)"
+    },
+    {
+      "year": -2238,
+      "month": 5,
+      "day": null,
+      "title": "THE GREAT FLOOD — May, Annus Mundi 1656; Vapor Canopy collapse, Birth of the Sun",
+      "clockIds": [
+        "annus-mundi",
+        "phoenix-138"
+      ],
+      "note": "2239 BC · AM 1656 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:527 / Chronicon_Engine_v2.html:683 (event ledger E)"
+    },
+    {
+      "year": -1974,
+      "month": null,
+      "day": null,
+      "title": "Long-Count sigil rung LC 1138 (AM 1920)",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1975 BC; the Stone lies beneath the Flood waters",
+      "source": "Chronicon_Engine_v2.html:1271"
+    },
+    {
+      "year": -1962,
+      "month": null,
+      "day": null,
+      "title": "Temporary poleshift, quakes, bodies of water moved",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1963 BC · AM 1932 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:528 / Chronicon_Engine_v2.html:684 (event ledger E)"
+    },
+    {
+      "year": -1914,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X returns — Tiamat passes, blackness swallows the stars (32nd yr of Nimrod)",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "1915 BC · AM 1980 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:529 / Chronicon_Engine_v2.html:685 (event ledger E)"
+    },
+    {
+      "year": -1912,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1913 BC · AM 1982 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:530 / Chronicon_Engine_v2.html:686 (event ledger E)"
+    },
+    {
+      "year": -1898,
+      "month": null,
+      "day": null,
+      "title": "Great Pyramid re-emerges (AM 1996)",
+      "clockIds": [
+        "annus-mundi"
+      ],
+      "note": "1899 BC; after 340 years beneath the waters; year of Babel & founding of Akkad",
+      "source": "chronicon-clocks-calendrics.txt:964,1130"
+    },
+    {
+      "year": -1854,
+      "month": null,
+      "day": null,
+      "title": "60th year of Nemesis inner transit — Sumer vanishes, Akkad rises",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "1855 BC · AM 2040 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:531 / Chronicon_Engine_v2.html:687 (event ledger E)"
+    },
+    {
+      "year": -1848,
+      "month": null,
+      "day": null,
+      "title": "Sodom & Gomorrah, Mohenjo-daro destroyed in fallout",
+      "clockIds": [],
+      "note": "1849 BC · AM 2046 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:532 / Chronicon_Engine_v2.html:688 (event ledger E)"
+    },
+    {
+      "year": -1686,
+      "month": null,
+      "day": null,
+      "title": "The Ogygian Flood — 25-yr darkness & famine, Heliolithic empire collapses",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1687 BC · AM 2208 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:533 / Chronicon_Engine_v2.html:689 (event ledger E)"
+    },
+    {
+      "year": -1638,
+      "month": null,
+      "day": null,
+      "title": "Jacob (Israel) dies in Egypt",
+      "clockIds": [],
+      "note": "1639 BC · AM 2256 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:534 / Chronicon_Engine_v2.html:690 (event ledger E)"
+    },
+    {
+      "year": -1548,
+      "month": null,
+      "day": null,
+      "title": "Three suns shone, sun dimmed, red sky, tsunamis",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1549 BC · AM 2346 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:535 / Chronicon_Engine_v2.html:691 (event ledger E)"
+    },
+    {
+      "year": -1512,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1513 BC · AM 2382 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:536 / Chronicon_Engine_v2.html:692 (event ledger E)"
+    },
+    {
+      "year": -1410,
+      "month": null,
+      "day": null,
+      "title": "Temporary poleshift; new star; sky bloody red; Israel born / Conquest of Canaan",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1411 BC · AM 2484 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:537 / Chronicon_Engine_v2.html:693 (event ledger E)"
+    },
+    {
+      "year": -1272,
+      "month": null,
+      "day": null,
+      "title": "Atreus predicts sun-darkening; sky bloody red (Seneca, Euripides, Mursilis II)",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1273 BC · AM 2622 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:538 / Chronicon_Engine_v2.html:694 (event ledger E)"
+    },
+    {
+      "year": -1134,
+      "month": null,
+      "day": null,
+      "title": "Cataclysm — Mediterranean Dark Age begins, Linear B collapses",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1135 BC · AM 2760 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:539 / Chronicon_Engine_v2.html:695 (event ledger E)"
+    },
+    {
+      "year": -1122,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X returned — China records an attack on the sun, Shang collapse",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "1123 BC · AM 2772 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:540 / Chronicon_Engine_v2.html:696 (event ledger E)"
+    },
+    {
+      "year": -1112,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1113 BC · AM 2782 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:541 / Chronicon_Engine_v2.html:697 (event ledger E)"
+    },
+    {
+      "year": -1038,
+      "month": null,
+      "day": null,
+      "title": "David, giant-slayer & future King of Israel, born",
+      "clockIds": [],
+      "note": "1039 BC · AM 2856 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:542 / Chronicon_Engine_v2.html:698 (event ledger E)"
+    },
+    {
+      "year": -996,
+      "month": null,
+      "day": null,
+      "title": "Large meteorite impact, North America (Badlands)",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "997 BC · AM 2898 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:543 / Chronicon_Engine_v2.html:699 (event ledger E)"
+    },
+    {
+      "year": -974,
+      "month": null,
+      "day": null,
+      "title": "Long-Count sigil rung LC 2138 (AM 2920)",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "975 BC; sixty-four years after the ledger's birth of David",
+      "source": "Chronicon_Engine_v2.html:1272"
+    },
+    {
+      "year": -858,
+      "month": null,
+      "day": null,
+      "title": "Phoenix symbol on Assyrian relief of King Jehu",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "859 BC · AM 3036 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:544 / Chronicon_Engine_v2.html:700 (event ledger E)"
+    },
+    {
+      "year": -720,
+      "month": null,
+      "day": null,
+      "title": "Kingdom of Israel falls to Assyria; sun & moon darkened, flames in sky",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "721 BC · AM 3174 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:545 / Chronicon_Engine_v2.html:701 (event ledger E)"
+    },
+    {
+      "year": -712,
+      "month": null,
+      "day": null,
+      "title": "713 BC — flux-tube blast vaporizes 185,000 Assyrians; orbit 360→365.25 d; baktun reset",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "713 BC · AM 3182 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:546 / Chronicon_Engine_v2.html:702 (event ledger E)"
+    },
+    {
+      "year": -582,
+      "month": 5,
+      "day": null,
+      "title": "Thales predicts the darkening of the sun, in May",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "583 BC · AM 3312 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:547 / Chronicon_Engine_v2.html:703 (event ledger E)"
+    },
+    {
+      "year": -444,
+      "month": null,
+      "day": null,
+      "title": "deJonge’s comet disaster, widespread fires",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "445 BC · AM 3450 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:548 / Chronicon_Engine_v2.html:704 (event ledger E)"
+    },
+    {
+      "year": -438,
+      "month": null,
+      "day": null,
+      "title": "Parthenon / Titanomachy commemorated — the War of the Giants, the gods",
+      "clockIds": [
+        "ner-600"
+      ],
+      "note": "439 BC · AM 3456 · ledger kind 'ner'",
+      "source": "chronicon-clocks-calendrics.txt:549 / Chronicon_Engine_v2.html:705 (event ledger E)"
+    },
+    {
+      "year": -330,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X returns — Moon dims, sky blood-red; Alexander takes Babylon",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "331 BC · AM 3564 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:550 / Chronicon_Engine_v2.html:706 (event ledger E)"
+    },
+    {
+      "year": -318,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "319 BC · AM 3576 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:551 / Chronicon_Engine_v2.html:707 (event ledger E)"
+    },
+    {
+      "year": -306,
+      "month": null,
+      "day": null,
+      "title": "Oera Lindh text records disasters across Europe",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "307 BC · AM 3588 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:552 / Chronicon_Engine_v2.html:708 (event ledger E)"
+    },
+    {
+      "year": -270,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X totally eclipses Venus on its way out (recorded by the Ptolemies)",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "271 BC · AM 3624 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:553 / Chronicon_Engine_v2.html:709 (event ledger E)"
+    },
+    {
+      "year": -30,
+      "month": null,
+      "day": null,
+      "title": "31 BC — continental quake Aegean→Judea during Battle of Actium; sky dragon over Egypt",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "31 BC · AM 3864 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:554 / Chronicon_Engine_v2.html:710 (event ledger E)"
+    },
+    {
+      "year": 26,
+      "month": null,
+      "day": null,
+      "title": "Long-Count sigil rung LC 3138 (AM 3920)",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "26 CE; the only rung of the early Common Era",
+      "source": "Chronicon_Engine_v2.html:1273"
+    },
+    {
+      "year": 76,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "76 CE · AM 3970 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:555 / Chronicon_Engine_v2.html:711 (event ledger E)"
+    },
+    {
+      "year": 162,
+      "month": null,
+      "day": null,
+      "title": "Pandemic afflicts China 11 yr, spreads to Rome 16 yr; Han Dynasty falls",
+      "clockIds": [
+        "ner-600"
+      ],
+      "note": "162 CE · AM 4056 · ledger kind 'ner'",
+      "source": "chronicon-clocks-calendrics.txt:556 / Chronicon_Engine_v2.html:712 (event ledger E)"
+    },
+    {
+      "year": 246,
+      "month": null,
+      "day": null,
+      "title": "Bloody sword in the sky, rain of blood (old Briton annal)",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "246 CE · AM 4140 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:557 / Chronicon_Engine_v2.html:713 (event ledger E)"
+    },
+    {
+      "year": 384,
+      "month": null,
+      "day": null,
+      "title": "Bloody pillar in the sky (Lycosthenes, Chronicon)",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "384 CE · AM 4278 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:558 / Chronicon_Engine_v2.html:714 (event ledger E)"
+    },
+    {
+      "year": 462,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X enters inner system; Statue of Zeus destroyed",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "462 CE · AM 4356 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:559 / Chronicon_Engine_v2.html:715 (event ledger E)"
+    },
+    {
+      "year": 470,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "470 CE · AM 4364 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:560 / Chronicon_Engine_v2.html:716 (event ledger E)"
+    },
+    {
+      "year": 522,
+      "month": null,
+      "day": null,
+      "title": "ONLY year Phoenix & Nemesis X are in the inner system together — \"celestial war of monsters,\" Dark Ages begin",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "522 CE · AM 4416 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:561 / Chronicon_Engine_v2.html:717 (event ledger E)"
+    },
+    {
+      "year": 762,
+      "month": null,
+      "day": null,
+      "title": "6000th year of the NER chronology; Kairite rift, 1st Abbasid year, Maya conclave at Copan",
+      "clockIds": [
+        "ner-600"
+      ],
+      "note": "762 CE · AM 4656 · ledger kind 'ner'",
+      "source": "chronicon-clocks-calendrics.txt:562 / Chronicon_Engine_v2.html:718 (event ledger E)"
+    },
+    {
+      "year": 798,
+      "month": null,
+      "day": null,
+      "title": "Quakes, dark sun, flooding in Mayan cities",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "798 CE · AM 4692 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:563 / Chronicon_Engine_v2.html:719 (event ledger E)"
+    },
+    {
+      "year": 864,
+      "month": null,
+      "day": null,
+      "title": "Foundation-of-Time reset — 144,000-day baktun completes; the Maya themselves disappear",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "864 CE · AM 4758 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:564 / Chronicon_Engine_v2.html:720 (event ledger E)"
+    },
+    {
+      "year": 1026,
+      "month": null,
+      "day": null,
+      "title": "Long-Count sigil rung LC 4138 (AM 4920)",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1026 CE; deep in the quiet of baktun 11",
+      "source": "Chronicon_Engine_v2.html:1274"
+    },
+    {
+      "year": 1212,
+      "month": null,
+      "day": null,
+      "title": "Mass human vanishings; quakes in the Middle East",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1212 CE · AM 5106 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:565 / Chronicon_Engine_v2.html:721 (event ledger E)"
+    },
+    {
+      "year": 1254,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X returns — 7th Crusade fails; England–Scotland war lasts the exact 60-yr transit",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "1254 CE · AM 5148 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:566 / Chronicon_Engine_v2.html:722 (event ledger E)"
+    },
+    {
+      "year": 1258,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1258 CE · AM 5152 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:567 / Chronicon_Engine_v2.html:723 (event ledger E)"
+    },
+    {
+      "year": 1314,
+      "month": null,
+      "day": null,
+      "title": "60th yr of transit — plague fogs, black darkness over Europe; Black Death follows",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "1314 CE · AM 5208 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:568 / Chronicon_Engine_v2.html:724 (event ledger E)"
+    },
+    {
+      "year": 1362,
+      "month": null,
+      "day": null,
+      "title": "Norse-Goth expedition of King Magnus surveys North America (Kensington Stone)",
+      "clockIds": [
+        "ner-600"
+      ],
+      "note": "1362 CE · AM 5256 · ledger kind 'ner'",
+      "source": "chronicon-clocks-calendrics.txt:569 / Chronicon_Engine_v2.html:725 (event ledger E)"
+    },
+    {
+      "year": 1488,
+      "month": null,
+      "day": null,
+      "title": "Mother Shipton born — prophesies the 2040 return of the Sky Dragon",
+      "clockIds": [],
+      "note": "1488 CE · AM 5382 · ledger kind 'note'",
+      "source": "chronicon-clocks-calendrics.txt:570 / Chronicon_Engine_v2.html:726 (event ledger E)"
+    },
+    {
+      "year": 1626,
+      "month": null,
+      "day": null,
+      "title": "Chinese record sun-darkening, meteoritic rain",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1626 CE · AM 5520 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:571 / Chronicon_Engine_v2.html:727 (event ledger E)"
+    },
+    {
+      "year": 1652,
+      "month": null,
+      "day": null,
+      "title": "Mayan baktun ends & begins",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "1652 CE · AM 5546 · ledger kind 'may'",
+      "source": "chronicon-clocks-calendrics.txt:572 / Chronicon_Engine_v2.html:728 (event ledger E)"
+    },
+    {
+      "year": 1764,
+      "month": null,
+      "day": null,
+      "title": "Astronomer Hoffman watches a dark object cross 1/5 of the sun, seen by millions",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1764 CE · AM 5658 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:573 / Chronicon_Engine_v2.html:729 (event ledger E)"
+    },
+    {
+      "year": 1882,
+      "month": null,
+      "day": null,
+      "title": "Petrie completes Giza survey (AM 5776)",
+      "clockIds": [
+        "annus-mundi"
+      ],
+      "note": "1882 + 3894 = 5776 = 76²; height 5776 in",
+      "source": "chronicon-clocks-calendrics.txt:985-987"
+    },
+    {
+      "year": 1902,
+      "month": null,
+      "day": null,
+      "title": "Unknown star, quakes, red rains — Charles Fort’s \"other Dark Age\"; Tuxtla Statuette found",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "1902 CE · AM 5796 · ledger kind 'phx'",
+      "source": "chronicon-clocks-calendrics.txt:574 / Chronicon_Engine_v2.html:730 (event ledger E)"
+    },
+    {
+      "year": 1962,
+      "month": null,
+      "day": null,
+      "title": "Close Encounters of the 4th Kind begin; Mars/Moon bases claimed; NER node",
+      "clockIds": [
+        "ner-600"
+      ],
+      "note": "1962 CE · AM 5856 · ledger kind 'ner'",
+      "source": "chronicon-clocks-calendrics.txt:575 / Chronicon_Engine_v2.html:731 (event ledger E)"
+    },
+    {
+      "year": 2026,
+      "month": null,
+      "day": null,
+      "title": "Long-Count sigil rung LC 5138 (AM 5920)",
+      "clockIds": [
+        "mayan-long-count"
+      ],
+      "note": "the last 138-faced year the count will ever show",
+      "source": "Chronicon_Engine_v2.html:1275"
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "day": 30,
+      "title": "You Are Here: AM 5920 · LC 5138 · 7264 yr after the Cataclysm",
+      "clockIds": [
+        "annus-mundi",
+        "mayan-long-count",
+        "cataclysm-era",
+        "metonic-19"
+      ],
+      "note": "txt reference date; moon near-full",
+      "source": "chronicon-clocks-calendrics.txt:478,955,1094"
+    },
+    {
+      "year": 2040,
+      "month": 5,
+      "day": 15,
+      "title": "15/16 MAY — Phoenix darkens the sun; lithospheric displacement; 6th Seal, Black Sun, Fenris",
+      "clockIds": [
+        "phoenix-138",
+        "phoenix-countdown"
+      ],
+      "note": "2040 CE · AM 5934 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:576 / Chronicon_Engine_v2.html:732 (event ledger E)"
+    },
+    {
+      "year": 2045,
+      "month": null,
+      "day": null,
+      "title": "LC 5157 - the count's final whole year",
+      "clockIds": [
+        "mayan-long-count",
+        "metonic-19"
+      ],
+      "note": "2026 + one Metonic 19",
+      "source": "Chronicon_Engine_v2.html:1261"
+    },
+    {
+      "year": 2046,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X returns — \"Time collapses,\" 16-hr days; Mayan 13.0.0.0.0",
+      "clockIds": [
+        "nemesis-x-792",
+        "mayan-long-count"
+      ],
+      "note": "2046 CE · AM 5940 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:577 / Chronicon_Engine_v2.html:733 (event ledger E)"
+    },
+    {
+      "year": 2106,
+      "month": null,
+      "day": null,
+      "title": "Nemesis X exits the system — Annus Mundi 6000",
+      "clockIds": [
+        "nemesis-x-792"
+      ],
+      "note": "2106 CE · AM 6000 · ledger kind 'nem'",
+      "source": "chronicon-clocks-calendrics.txt:578 / Chronicon_Engine_v2.html:734 (event ledger E)"
+    },
+    {
+      "year": 2106,
+      "month": null,
+      "day": null,
+      "title": "AM 6000",
+      "clockIds": [
+        "annus-mundi",
+        "nemesis-x-792"
+      ],
+      "note": "same year as ledger 'Nemesis X exits'",
+      "source": "chronicon-clocks-calendrics.txt:649"
+    },
+    {
+      "year": 2178,
+      "month": null,
+      "day": null,
+      "title": "Simulation Collapse — 138 yr after the 2040 reset; exodus into the Real universe",
+      "clockIds": [
+        "phoenix-138"
+      ],
+      "note": "2178 CE · AM 6072 · ledger kind 'key'",
+      "source": "chronicon-clocks-calendrics.txt:579 / Chronicon_Engine_v2.html:735 (event ledger E)"
+    }
+  ],
+  "openQuestions": [
+    "YEAR CONVENTION: all 'year' fields are ASTRONOMICAL years exactly as the sources' JS uses them: 1 BC = 0, 2 BC = -1, so BC year B -> 1 - B (e.g. 5239 BC = -5238, 3113 BC = -3112, 2239 BC = -2238). Source: TIME MODEL comment, chronicon-clocks-calendrics.txt:484 / Chronicon_Engine_v2.html:639. fmtYear(a) = a<=0 ? (1-a)+' BC' : a+' CE'.",
+    "'YEAR ONE' (3895 BC, astro -3894) evaluates to AM 0 under AM = astro + 3894; ledger rows before it have negative AM (-5238 -> AM -1344). Source labels it Year One; 20-chronicon-source.md §7.7 reads AM as years elapsed.",
+    "Nibiru: absent from all assigned files. Outside them it appears in chronicon-desk/package.json (description only), Chronotecture-Charts/redesign/vid.html:111-112 ('Anunnaki planet Nibiru passes over ecliptic, entering' 1254; 'Nibiru seen from Earth as it exits the system' 1314) and iic.html:131 (1314 'Nibiru passed close to Earth'). 1254 and 1314 are Nemesis X ledger years; no source states Nibiru = Nemesis X. Not imported.",
+    "Sothic: v2 uses 1460 (mod(astro-139,1460), epoch astro 139); MANUAL OPH_SOTHIC = 1461. 20-chronicon-source.md §2.7 says Sothic/Saros/Inex/Jupiter-Saturn are absent from the clocks txt and have no Chronicon provenance (they are Natorion equation constants).",
+    "Precession: MANUAL OPH_PRECESSION = 25772 yr; v2 prose says '72 years — one precessional degree' (which x360 would be 25920). No precession clock/epoch in any source.",
+    "Saros, Inex, Jupiter-Saturn, planetary returns and year-length constants have no epoch, so no position/next-date can be computed from the sources alone.",
+    "Nemesis inner arc: render test is offset < 60 in both files, but v2's ledger marker uses offset <= 60 ('0 = entry … 60 = exit'). Six nem rows sit at offset 60 (-3438, -2646, -1854, -270, 1314, 2106); the '60th year of transit' rows (-1854, 1314) test as outside under < 60.",
+    "Ledger 522 CE says 'ONLY year Phoenix & Nemesis X are in the inner system together', but mod(522-462,792) = 60 (not inner); years satisfying both tests are -3480, -2652, -306 (20-chronicon-source.md §7.2).",
+    "Baktun: labelled 144,000 days, but MAY_NODES spans are 400 yr x6 then 394 yr x7 (pivot -712, the '360→365.25 d' reset row); 6x400+7x394 = 5158. Full count 1,872,000 d (v2).",
+    "Mayan Calendar Round epoch JD 584283 is, by the sources' own jdn(), 11 Aug of astro -3113 (3114 BC), one year before the Long-Count epoch astro -3112 (3113 BC) used by MAY_NODES and LC = astro + 3112.",
+    "Lunation number: txt Math.round((J-2423436.40347)/SYN); v2 Math.floor(...)+1. Metonic reference year: txt hard-codes 2026; v2 uses the current year.",
+    "Mayan wheel past 2046: txt shows 'BAKTUN 14/13' (span 0); v2 adds a '13.0.0.0.0 complete' branch.",
+    "NER: 600 years (clock) vs v2 Anunna reckoning 1 NER = 216,000 turnings = 600 Draconian (360-day) years (~591.4 Julian years). Anunna turnings epoch jdn(-3894,1,1) is what v2 code uses; the source prose gives no zero point (20-chronicon-source.md §10.7).",
+    "2040 Phoenix date: ledger says '15/16 MAY'; the countdown targets 15 May 2040 00:00 UTC.",
+    "Hebrew gap note says the rabbinic epoch (3761 BC) is 134 yr after Year One, '133 after Rosh Hashanah'; Persian Solar Hijri meta says 'from 622 CE'.",
+    "Ledger heading says 'The 300-Event Ledger' but both files ship 69 identical rows (txt escapes ’ as \\u2019). Only year-level dates; month given only for 2040 (15 May), the Flood (May) and Thales (May).",
+    "Phoenix appears both as a clock (phoenix-138) and a body; ledger rows of other kinds also land on Phoenix nodes (-2238 key, 1488 note) and were included as Phoenix passages. 2178 'Simulation Collapse' is a node (138 yr after 2040) and is included as a next passage."
+  ]
+}

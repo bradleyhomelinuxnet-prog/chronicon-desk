@@ -1,0 +1,2055 @@
+{
+  "cycle": {
+    "lengthYears": 138,
+    "description": "Phoenix 138-year cycle per the Archaix/Chronicon thesis (Jason Breshears) as used in the Phoenix CODEX 138 project. Phoenix years fall on multiples of 138 Anno Mundi counted from Year One (3895 BC = AM 1); 43 such passes run to 2040 (AM 5934 = 138 x 43). Every fourth Phoenix is a flood (552-year chain: 2239, 1687, 1135, 583 BC). The engine pairs it with Metonic 19, NER 600, Nemesis 792, the 144,000-day baktun and the sar.",
+    "anchorYears": [
+      -5239,
+      -3895,
+      -2239,
+      1902,
+      2040,
+      2106
+    ],
+    "anchorNotes": {
+      "-5239": "Chronicon count origin (Nemesis/Great Year count opens); 7,344 years to 2106",
+      "-3895": "Year One, Anno Mundi 1",
+      "-2239": "Great Flood, AM 1656 = 138 x 12 (the hinge/mirror centre)",
+      "1902": "Last documented Phoenix, AM 5796 = 138 x 42 (Mont Pelee / Red Mud)",
+      "2040": "Next Phoenix, AM 5934 = 138 x 43",
+      "2106": "AM 6000 capstone year; Nemesis 792 loop from 3439 BC also lands here"
+    },
+    "yearNumbering": "BC years are stored as negative integers exactly as the sources' own sortYear fields do: N BC = -N, so 1 BC = -1 and there is NO year zero (1 BC is followed by AD 1). This is historical BC/AD numbering written with a minus sign, NOT astronomical numbering (astronomical year = -(N-1), i.e. 1 BC = 0). The sources state the Chronicon rule AD = AM - 3894 and do BC arithmetic as 3895 - AM; the station sheets note the Long Count zero '11 August 3114 BC ... astronomical year -3113', which Chronicon lists as 3113 BCE. Fractional sortYears in the sources (e.g. 1932.5, 2026.74) were used only for ordering and are rounded down here."
+  },
+  "phoenixDates": [
+    {
+      "year": -4309,
+      "label": "4309 BC - THE DAYSTAR GOES DARK: Chronicon calls this 'Phoenix Year 1' (start of chronoliths); 414 years (138 x 3) before Year One",
+      "cycleIndex": null,
+      "source": "ere-we-were-remotion/stations.json C02; chronologists-machine/src/data/stations.json M02"
+    },
+    {
+      "year": -4033,
+      "label": "4033 BCE - one Phoenix step (-138 AM) before Year One; mirror of 2377 BCE",
+      "cycleIndex": -1,
+      "source": "ere-we-were-remotion/stations.json C18"
+    },
+    {
+      "year": -3895,
+      "label": "AM 1 - YEAR ONE - THE BLACK FLAT (Anno Mundi count begins)",
+      "cycleIndex": 0,
+      "source": "films/data/AllClips_Chyrons_v1.json; chronologists-machine/src/data/stations.json M03; ere-we-were-remotion/stations.json C04"
+    },
+    {
+      "year": -3757,
+      "label": "AM 138 - PHOENIX 1 · 138 × 1 - A CALENDAR REMEMBERS",
+      "cycleIndex": 1,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C05 (THE FIRST PHOENIX)"
+    },
+    {
+      "year": -3620,
+      "label": "AM 276 - PHOENIX 2 · 138 × 2 - SALT WHERE THE SEA WAS",
+      "cycleIndex": 2,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -3482,
+      "label": "AM 414 - PHOENIX 3 · 138 × 3 - THE QUIET ONE",
+      "cycleIndex": 3,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -3344,
+      "label": "AM 552 - PHOENIX 4 · 138 × 4 - THE SLOW MUD",
+      "cycleIndex": 4,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C07 gives 3343 BC (THE FIRST CYCLE CLOSES)"
+    },
+    {
+      "year": -3206,
+      "label": "AM 690 - PHOENIX 5 · 138 × 5 - LIGHTS ON THE MOUNTAIN",
+      "cycleIndex": 5,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C08 gives 3205 BC (ENOCH'S THIRD YEAR)"
+    },
+    {
+      "year": -3068,
+      "label": "AM 828 - PHOENIX 6 · 138 × 6 - BUILDING THE CLOCK",
+      "cycleIndex": 6,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C12 gives 3067 BC (THE MIDPOINT)"
+    },
+    {
+      "year": -2930,
+      "label": "AM 966 - PHOENIX 7 · 138 × 7 - THE QUARRY",
+      "cycleIndex": 7,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -2792,
+      "label": "AM 1104 - PHOENIX 8 · 138 × 8 - RED DUST",
+      "cycleIndex": 8,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -2654,
+      "label": "AM 1242 - PHOENIX 9 · 138 × 9 - NOBODY HOME",
+      "cycleIndex": 9,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C16 gives 2653 BC (THE SUMERIAN CATASTROPHE)"
+    },
+    {
+      "year": -2516,
+      "label": "AM 1380 - PHOENIX 10 · 138 × 10 - WRONG BUILDER",
+      "cycleIndex": 10,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -2378,
+      "label": "AM 1518 - PHOENIX 11 · 138 × 11 - A BROWN SUN",
+      "cycleIndex": 11,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C18 gives 2377 BC (THE LAST PASS)"
+    },
+    {
+      "year": -2239,
+      "label": "AM 1656 - PHOENIX 12 · 138 × 12 - THE FLOOD",
+      "cycleIndex": 12,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json C19, F01; chronologists-machine/src/data/stations.json M05-M08"
+    },
+    {
+      "year": -2101,
+      "label": "AM 1794 - PHOENIX 13 · 138 × 13 - DIGGING OUT",
+      "cycleIndex": 13,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -1963,
+      "label": "AM 1932 - PHOENIX 14 · 138 × 14 - THE GROUND REMEMBERS",
+      "cycleIndex": 14,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -1825,
+      "label": "AM 2070 - PHOENIX 15 · 138 × 15 - A RUST MOON",
+      "cycleIndex": 15,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -1687,
+      "label": "AM 2208 - PHOENIX 16 · 138 × 16 - THE FLOOD OF OGYGES",
+      "cycleIndex": 16,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json F02; chronologists-machine/src/data/stations.json M09"
+    },
+    {
+      "year": -1549,
+      "label": "AM 2346 - PHOENIX 17 · 138 × 17 - THERA",
+      "cycleIndex": 17,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -1411,
+      "label": "AM 2484 - PHOENIX 18 · 138 × 18 - ONE VALLEY",
+      "cycleIndex": 18,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -1273,
+      "label": "AM 2622 - PHOENIX 19 · 138 × 19 - KADESH",
+      "cycleIndex": 19,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json K03"
+    },
+    {
+      "year": -1135,
+      "label": "AM 2760 - PHOENIX 20 · 138 × 20 - THE AXIS",
+      "cycleIndex": 20,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json F03"
+    },
+    {
+      "year": -997,
+      "label": "AM 2898 - PHOENIX 21 · 138 × 21 - THE SWORD",
+      "cycleIndex": 21,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -859,
+      "label": "AM 3036 - PHOENIX 22 · 138 × 22 - ASSYRIA MARCHES",
+      "cycleIndex": 22,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -721,
+      "label": "AM 3174 - PHOENIX 23 · 138 × 23 - TEN TRIBES",
+      "cycleIndex": 23,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -583,
+      "label": "AM 3312 - PHOENIX 24 · 138 × 24 - THE MEDO-LYDIAN DARK",
+      "cycleIndex": 24,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json F04; chronologists-machine/src/data/stations.json M10"
+    },
+    {
+      "year": -445,
+      "label": "AM 3450 - PHOENIX 25 · 138 × 25 - THE WALLS AGAIN",
+      "cycleIndex": 25,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -307,
+      "label": "AM 3588 - PHOENIX 26 · 138 × 26 - A RUST SKY",
+      "cycleIndex": 26,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -169,
+      "label": "AM 3726 - PHOENIX 27 · 138 × 27 - THE GOLD GOES DOWN",
+      "cycleIndex": 27,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": -31,
+      "label": "AM 3864 - PHOENIX 28 · 138 × 28 - JUDEA AND ACTIUM",
+      "cycleIndex": 28,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 107,
+      "label": "AM 4002 - PHOENIX 29 · 138 × 29 - THE WRONG SUN",
+      "cycleIndex": 29,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 245,
+      "label": "AM 4140 - PHOENIX 30 · 138 × 30 - CARTS AT THE GATE",
+      "cycleIndex": 30,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 383,
+      "label": "AM 4278 - PHOENIX 31 · 138 × 31 - A TIMESTAMP",
+      "cycleIndex": 31,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json K03 gives 384 AD for the same pass"
+    },
+    {
+      "year": 521,
+      "label": "AM 4416 - PHOENIX 32 · 138 × 32 - LIGHT WITHOUT BRIGHTNESS",
+      "cycleIndex": 32,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 659,
+      "label": "AM 4554 - PHOENIX 33 · 138 × 33 - THE CAMELS KNOW",
+      "cycleIndex": 33,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 797,
+      "label": "AM 4692 - PHOENIX 34 · 138 × 34 - DRAGONS, THEY WROTE",
+      "cycleIndex": 34,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 935,
+      "label": "AM 4830 - PHOENIX 35 · 138 × 35 - ELDGJA",
+      "cycleIndex": 35,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1073,
+      "label": "AM 4968 - PHOENIX 36 · 138 × 36 - EMPTY SCAFFOLDS",
+      "cycleIndex": 36,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1211,
+      "label": "AM 5106 - PHOENIX 37 · 138 × 37 - SOMETIMES MEN",
+      "cycleIndex": 37,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1349,
+      "label": "AM 5244 - PHOENIX 38 · 138 × 38 - TWICE NINETEEN",
+      "cycleIndex": 38,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1487,
+      "label": "AM 5382 - PHOENIX 39 · 138 × 39 - DRUMS ON THE TEMPLE",
+      "cycleIndex": 39,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1625,
+      "label": "AM 5520 - PHOENIX 40 · 138 × 40 - CROSSES ON THE DOORS",
+      "cycleIndex": 40,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1763,
+      "label": "AM 5658 - PHOENIX 41 · 138 × 41 - NINETEEN GUNS",
+      "cycleIndex": 41,
+      "source": "films/data/AllClips_Chyrons_v1.json"
+    },
+    {
+      "year": 1902,
+      "label": "AM 5796 - PHOENIX 42 · 138 × 42 - RED MUD",
+      "cycleIndex": 42,
+      "source": "films/data/AllClips_Chyrons_v1.json; chronologists-machine/src/data/stations.json M11; ere-we-were-remotion/stations.json K02"
+    }
+  ],
+  "events": [
+    {
+      "year": -5239,
+      "yearEnd": null,
+      "title": "THE FIRST FIRE / THE GREAT YEAR BEGINS",
+      "summary": "A fire crosses the sky and the Chronicon count opens: 1,344 years before Year One, 7,344 years (3 x 2,448) to 2106; the 600-year Great Year and a binary sun with a smaller Daystar.",
+      "tags": [
+        "origin",
+        "sky-fire",
+        "Nemesis",
+        "Great Year"
+      ],
+      "phoenixYear": null,
+      "source": "chronologists-machine/src/data/stations.json M01; ere-we-were-remotion/stations.json C01"
+    },
+    {
+      "year": -4309,
+      "yearEnd": null,
+      "title": "SHADOW ENTERS THE CIRCLE / THE DAYSTAR GOES DARK",
+      "summary": "Chronoliths begin as a shadow first enters a stone circle's centre; the smaller sun collapses into a dark companion (Nemesis), the Kuiper Belt its wreckage. 930 years after 5239.",
+      "tags": [
+        "Nemesis",
+        "chronolith",
+        "sky"
+      ],
+      "phoenixYear": null,
+      "source": "chronologists-machine/src/data/stations.json M02; ere-we-were-remotion/stations.json C02"
+    },
+    {
+      "year": -4039,
+      "yearEnd": null,
+      "title": "THE CAPTURE OF LUNA",
+      "summary": "After 270 frozen years Earth drifts into the Sun's system and takes up the Moon; Chronicon says Ussher's 4004 BC creation is 109 years off.",
+      "tags": [
+        "Moon",
+        "cosmic"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C03"
+    },
+    {
+      "year": -3895,
+      "yearEnd": null,
+      "title": "YEAR ONE",
+      "summary": "Banishment from the walled garden; Anno Mundi 1, 6,000 years to 2106. Counted 1,656 years back from the 2239 BC Flood. AD = AM - 3894.",
+      "tags": [
+        "origin",
+        "Anno Mundi"
+      ],
+      "phoenixYear": -3895,
+      "source": "chronologists-machine/src/data/stations.json M03; ere-we-were-remotion/stations.json C04; films/data/AllClips_Chyrons_v1.json THE BLACK FLAT; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3757,
+      "yearEnd": null,
+      "title": "THE FIRST PHOENIX",
+      "summary": "Phoenix completes its first 138-year orbit after Year One; a calendar remembers what people forget. Hebrew epoch listed by Chronicon at 3760 BCE (135 AM).",
+      "tags": [
+        "Phoenix"
+      ],
+      "phoenixYear": -3757,
+      "source": "ere-we-were-remotion/stations.json C05; films/data/AllClips_Chyrons_v1.json A CALENDAR REMEMBERS; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3620,
+      "yearEnd": null,
+      "title": "SALT WHERE THE SEA WAS",
+      "summary": "Phoenix 2: salt where the sea had been, nothing left to burn, yet the air smells of smoke.",
+      "tags": [
+        "Phoenix",
+        "sea"
+      ],
+      "phoenixYear": -3620,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3482,
+      "yearEnd": null,
+      "title": "THE QUIET ONE",
+      "summary": "Phoenix 3: red rain and nothing else; a quiet pass nobody writes down.",
+      "tags": [
+        "Phoenix",
+        "red rain"
+      ],
+      "phoenixYear": -3482,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3439,
+      "yearEnd": null,
+      "title": "THE WATCHERS DESCEND / THE ARCS",
+      "summary": "Nemesis X completes a 792-year orbit; fifty Watchers descend on Hermon; the Gihon floods a third of the earth in Enosh's days. 2239 + 1,200 = 3439; 2239 - 792 = 1447 BC.",
+      "tags": [
+        "Nemesis",
+        "flood",
+        "Watchers"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C06; chronologists-machine/src/data/stations.json M04"
+    },
+    {
+      "year": -3344,
+      "yearEnd": null,
+      "title": "THE SLOW MUD",
+      "summary": "Phoenix 4: the mud came slowly enough to run from, but they did not; a cook fire still burns beneath it.",
+      "tags": [
+        "Phoenix",
+        "mudflow"
+      ],
+      "phoenixYear": -3344,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3343,
+      "yearEnd": null,
+      "title": "THE FIRST CYCLE CLOSES",
+      "summary": "Four passes, 552 years; 5,448 years remain to 2106, read as the Great Pyramid's height in inches without its capstone.",
+      "tags": [
+        "Phoenix",
+        "Great Pyramid"
+      ],
+      "phoenixYear": -3343,
+      "source": "ere-we-were-remotion/stations.json C07"
+    },
+    {
+      "year": -3300,
+      "yearEnd": null,
+      "title": "THE FIRST ACCOUNTS",
+      "summary": "Core Claim 3: seals and proto-writing are dated 3500-3100 BC everywhere but Gobekli Tepe. Uruk IV tablets (~3350 BC) are the oldest writing known.",
+      "tags": [
+        "evidence",
+        "writing"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E03"
+    },
+    {
+      "year": -3206,
+      "yearEnd": null,
+      "title": "LIGHTS ON THE MOUNTAIN",
+      "summary": "Phoenix 5: lights on the mountain; they came down, were called gods, and led us.",
+      "tags": [
+        "Phoenix",
+        "sky"
+      ],
+      "phoenixYear": -3206,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3205,
+      "yearEnd": null,
+      "title": "ENOCH'S THIRD YEAR",
+      "summary": "Phoenix passes in the third regnal year of Enoch, the first to write down the signs of heaven (364-day year); 'the planet of chronology and the chronologist'.",
+      "tags": [
+        "Phoenix",
+        "Enoch"
+      ],
+      "phoenixYear": -3205,
+      "source": "ere-we-were-remotion/stations.json C08"
+    },
+    {
+      "year": -3200,
+      "yearEnd": null,
+      "title": "THE ŠAR",
+      "summary": "Engine constant: the Sumerian sar = 3,600; Berossus's 120 sars (432,000) read as days are three baktuns. Archaix reads the sar as a day's turning of the stars.",
+      "tags": [
+        "cipher"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K06"
+    },
+    {
+      "year": -3163,
+      "yearEnd": null,
+      "title": "NEWGRANGE",
+      "summary": "The Sethites raise Carnac, Newgrange and Stonehenge I in Enoch's 45th year; Newgrange's roof-box aimed at winter-solstice sunrise c. 3150 BC.",
+      "tags": [
+        "megalith"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C09"
+    },
+    {
+      "year": -3113,
+      "yearEnd": null,
+      "title": "THE LONG COUNT BEGINS",
+      "summary": "Day zero of the Mayan Long Count (13.0.0.0.0 4 Ahau 8 Kumk'u); Chronicon reads the count in days and closes it in 2046, not 2012.",
+      "tags": [
+        "calendar"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C10"
+    },
+    {
+      "year": -3103,
+      "yearEnd": null,
+      "title": "THE BLACK AGE",
+      "summary": "Kali Yuga opens, ten years after the Long Count zero; Kali is time; the Persians remember a flood; Manetho's 36,525-year chronicle (25 Sothic cycles).",
+      "tags": [
+        "calendar",
+        "flood"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C11"
+    },
+    {
+      "year": -3068,
+      "yearEnd": null,
+      "title": "BUILDING THE CLOCK",
+      "summary": "Phoenix 6: they lay the line with water; 828 years and six cycles in, they are building the clock.",
+      "tags": [
+        "Phoenix",
+        "Great Pyramid"
+      ],
+      "phoenixYear": -3068,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -3067,
+      "yearEnd": null,
+      "title": "THE MIDPOINT",
+      "summary": "828 years after Year One and 828 before the Flood: a Phoenix pass at the exact centre of the antediluvian count (3895 - 6 x 138).",
+      "tags": [
+        "Phoenix",
+        "mirror"
+      ],
+      "phoenixYear": -3067,
+      "source": "ere-we-were-remotion/stations.json C12"
+    },
+    {
+      "year": -2965,
+      "yearEnd": null,
+      "title": "ADAM DIES",
+      "summary": "Adam dies at 930 AM and orders burial at the middle of the earth; Chronicon argues he had lived since 4039 BC (1,074 years).",
+      "tags": [
+        "patriarch"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C13"
+    },
+    {
+      "year": -2930,
+      "yearEnd": null,
+      "title": "THE QUARRY",
+      "summary": "Phoenix 7: they were still cutting stone the week it passed; the stone did not notice.",
+      "tags": [
+        "Phoenix",
+        "quarry"
+      ],
+      "phoenixYear": -2930,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2905,
+      "yearEnd": null,
+      "title": "THE ALTAR IS BEGUN",
+      "summary": "The Sethites begin the Great Pyramid 666 years before the Flood, four corners first then inward; slope 51°51'52\".",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C14"
+    },
+    {
+      "year": -2905,
+      "yearEnd": null,
+      "title": "OPH_PI",
+      "summary": "Engine constant OPH_PI = 3.14 ('Archaix pi'): base 440 cubits, height 280, 2 x 440 / 280 = 22/7.",
+      "tags": [
+        "cipher",
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K07"
+    },
+    {
+      "year": -2900,
+      "yearEnd": null,
+      "title": "MUD BRICK",
+      "summary": "The Great Pyramid already finished while others still build in mud brick, before the kings who claim it.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2815,
+      "yearEnd": null,
+      "title": "THE ALTAR IS FINISHED",
+      "summary": "Great Pyramid complete after 90 years (1,080 months) in 1080 AM; perimeter 3,024 ft; 203 courses, top left off 'for later'; no body, no inscription, only numbers.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C15; films/data/AllClips_Chyrons_v1.json OFF-CYCLE TWO HUNDRED THREE COURSES (AM 1081) and ONLY NUMBERS; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2815,
+      "yearEnd": null,
+      "title": "OPH_PHI",
+      "summary": "Engine constant OPH_PHI = 1.618: slant height over half-base at 51°52' is the golden ratio (Kepler triangle).",
+      "tags": [
+        "cipher",
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K08"
+    },
+    {
+      "year": -2792,
+      "yearEnd": null,
+      "title": "RED DUST",
+      "summary": "Phoenix 8: dust eating the monument from the top down; 1,104 years and still counting.",
+      "tags": [
+        "Phoenix",
+        "dust"
+      ],
+      "phoenixYear": -2792,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2700,
+      "yearEnd": null,
+      "title": "ASWAN",
+      "summary": "Copper and sand, they say; but the drill groove advances a tenth of an inch every turn.",
+      "tags": [
+        "Great Pyramid",
+        "quarry"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2654,
+      "yearEnd": null,
+      "title": "NOBODY HOME",
+      "summary": "Phoenix 9: every door open, every fire lit, nobody home; they went to the next cycle.",
+      "tags": [
+        "Phoenix",
+        "disappearance"
+      ],
+      "phoenixYear": -2654,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2653,
+      "yearEnd": null,
+      "title": "THE SUMERIAN CATASTROPHE",
+      "summary": "Phoenix pass 414 years before the Flood, matched to Sitchin's Sumerian cataclysm; sky dark at noon over Saqqara. One Cursed Earth.",
+      "tags": [
+        "Phoenix",
+        "catastrophe",
+        "darkness"
+      ],
+      "phoenixYear": -2653,
+      "source": "ere-we-were-remotion/stations.json C16"
+    },
+    {
+      "year": -2647,
+      "yearEnd": null,
+      "title": "THE EXODUS OF THE ANUNNA",
+      "summary": "Nemesis X returns after 792 years; the Anunna withdraw for 732 years; the Hurrians build Urkesh.",
+      "tags": [
+        "Nemesis",
+        "Anunnaki"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json C17"
+    },
+    {
+      "year": -2560,
+      "yearEnd": null,
+      "title": "KHUFU FOUND THEM",
+      "summary": "The stela says Khufu found the monuments here, repairing the Sphinx, not carving it.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2516,
+      "yearEnd": null,
+      "title": "WRONG BUILDER",
+      "summary": "Phoenix 10: a pharaoh walks to a monument older than his name. Wrong builder, right story.",
+      "tags": [
+        "Phoenix",
+        "Great Pyramid"
+      ],
+      "phoenixYear": -2516,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2378,
+      "yearEnd": null,
+      "title": "A BROWN SUN",
+      "summary": "Phoenix 11: noon under a brown sun; the barley ripens anyway.",
+      "tags": [
+        "Phoenix",
+        "dim sun"
+      ],
+      "phoenixYear": -2378,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2377,
+      "yearEnd": null,
+      "title": "THE LAST PASS",
+      "summary": "Phoenix's final orbit before the Flood, 138 years out; mirror of 4033 BCE, 138 years before Year One.",
+      "tags": [
+        "Phoenix",
+        "mirror"
+      ],
+      "phoenixYear": -2377,
+      "source": "ere-we-were-remotion/stations.json C18"
+    },
+    {
+      "year": -2239,
+      "yearEnd": null,
+      "title": "THE GREAT FLOOD",
+      "summary": "AM 1656 = 138 x 12, the twelfth Phoenix; 1,656 years after Year One and before the Medo-Lydian eclipse; first link of the 552-year flood chain; the mirror's centre.",
+      "tags": [
+        "flood",
+        "Phoenix",
+        "mirror"
+      ],
+      "phoenixYear": -2239,
+      "source": "ere-we-were-remotion/stations.json C19, F01; chronologists-machine/src/data/stations.json M05, M06, M07, M08; films/data/AllClips_Chyrons_v1.json THE FLOOD; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -2101,
+      "yearEnd": null,
+      "title": "DIGGING OUT",
+      "summary": "Phoenix 13: survivors dig out with their hands; every cycle someone digs out and calls it history.",
+      "tags": [
+        "Phoenix",
+        "aftermath"
+      ],
+      "phoenixYear": -2101,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1963,
+      "yearEnd": null,
+      "title": "THE GROUND REMEMBERS",
+      "summary": "Phoenix 14: no scripture keeps the date, the ground does; Jason's charts call it worldwide.",
+      "tags": [
+        "Phoenix",
+        "catastrophe"
+      ],
+      "phoenixYear": -1963,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1825,
+      "yearEnd": null,
+      "title": "A RUST MOON",
+      "summary": "Phoenix 15: the Moon turns the colour of rust, and only one man writes it down.",
+      "tags": [
+        "Phoenix",
+        "Moon"
+      ],
+      "phoenixYear": -1825,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1687,
+      "yearEnd": null,
+      "title": "THE FLOOD OF OGYGES",
+      "summary": "AM 2208 = 138 x 16; 552 years after the Flood, second link of the chain. Comet glow over a darkened sun; Attica under water; moai, Baalbek and Aswan quarries left mid-cut.",
+      "tags": [
+        "flood",
+        "comet",
+        "Phoenix",
+        "quarry"
+      ],
+      "phoenixYear": -1687,
+      "source": "ere-we-were-remotion/stations.json F02, E08; chronologists-machine/src/data/stations.json M09; films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1549,
+      "yearEnd": null,
+      "title": "THERA",
+      "summary": "Phoenix 17: Thera goes up; no witness wrote it down, but someone watched.",
+      "tags": [
+        "Phoenix",
+        "volcano"
+      ],
+      "phoenixYear": -1549,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1447,
+      "yearEnd": null,
+      "title": "EARLY EXODUS (ARC)",
+      "summary": "2239 - 792 = 1447 BC, the early Exodus date, struck from AM 1656 by the 792-year arc.",
+      "tags": [
+        "Nemesis",
+        "arc"
+      ],
+      "phoenixYear": null,
+      "source": "chronologists-machine/src/data/stations.json M04"
+    },
+    {
+      "year": -1411,
+      "yearEnd": null,
+      "title": "ONE VALLEY",
+      "summary": "Phoenix 18: it burned one valley and spared the next; ours was spared, this time.",
+      "tags": [
+        "Phoenix",
+        "fire"
+      ],
+      "phoenixYear": -1411,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1273,
+      "yearEnd": null,
+      "title": "KADESH",
+      "summary": "Phoenix 19, AM 2622 = 19 x 138 = 138 Metonic cycles; two armies with every face turned up; the year after Ramesses II fought at Kadesh.",
+      "tags": [
+        "Phoenix",
+        "Metonic",
+        "battle"
+      ],
+      "phoenixYear": -1273,
+      "source": "ere-we-were-remotion/stations.json K03; films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -1135,
+      "yearEnd": null,
+      "title": "THE AXIS",
+      "summary": "Phoenix 20 (AM 2760), third flood-chain link and midpoint of the 43 fires; Atlantis goes under and the Bronze Age ends.",
+      "tags": [
+        "flood",
+        "Phoenix",
+        "Atlantis"
+      ],
+      "phoenixYear": -1135,
+      "source": "ere-we-were-remotion/stations.json F03; films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -997,
+      "yearEnd": null,
+      "title": "THE SWORD",
+      "summary": "Phoenix 21: a shepherd king's tent on a hill; nothing kept but the count.",
+      "tags": [
+        "Phoenix"
+      ],
+      "phoenixYear": -997,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -859,
+      "yearEnd": null,
+      "title": "ASSYRIA MARCHES",
+      "summary": "Phoenix 22: Assyria marches; the dust ahead of them is not their own.",
+      "tags": [
+        "Phoenix",
+        "dust",
+        "war"
+      ],
+      "phoenixYear": -859,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -721,
+      "yearEnd": null,
+      "title": "TEN TRIBES",
+      "summary": "Phoenix 23: ten tribes walk out of the record and never walk back in.",
+      "tags": [
+        "Phoenix",
+        "exile"
+      ],
+      "phoenixYear": -721,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -583,
+      "yearEnd": null,
+      "title": "THE MEDO-LYDIAN DARK",
+      "summary": "Phoenix 24, AM 3312 = 138 x 24, fourth flood-chain link: the sun goes out over the Halys and Medes and Lydians stop fighting. Thales called (remembered) it; book rounds 2 years.",
+      "tags": [
+        "eclipse",
+        "Phoenix",
+        "battle"
+      ],
+      "phoenixYear": -583,
+      "source": "ere-we-were-remotion/stations.json F04; chronologists-machine/src/data/stations.json M10; films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -539,
+      "yearEnd": null,
+      "title": "TIME, TIMES, AND HALF A TIME",
+      "summary": "Important MSRF set (1260, 2520): Daniel's time, times and half a time = 1,260 days; Babylon falls to Cyrus.",
+      "tags": [
+        "cipher",
+        "prophecy"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K13"
+    },
+    {
+      "year": -450,
+      "yearEnd": null,
+      "title": "THE PRIESTS GUESS",
+      "summary": "Two thousand years after the builders, a Greek asks the priests, and the priests guess.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -445,
+      "yearEnd": null,
+      "title": "THE WALLS AGAIN",
+      "summary": "Phoenix 25: one hand on the stone, one on the spear; they always build the walls again.",
+      "tags": [
+        "Phoenix",
+        "rebuilding"
+      ],
+      "phoenixYear": -445,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -432,
+      "yearEnd": null,
+      "title": "NINETEEN YEARS, TWO HUNDRED THIRTY-FIVE MOONS",
+      "summary": "Engine's Metonic wheel: Meton announces the 19-year cycle on the Pnyx; 19 years hold 235 moons, drifting about two hours per round.",
+      "tags": [
+        "Metonic",
+        "cipher"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K01"
+    },
+    {
+      "year": -307,
+      "yearEnd": null,
+      "title": "A RUST SKY",
+      "summary": "Phoenix 26: galleys under a rust sky, waiting for a wind that is not coming.",
+      "tags": [
+        "Phoenix",
+        "sky"
+      ],
+      "phoenixYear": -307,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -169,
+      "yearEnd": null,
+      "title": "THE GOLD GOES DOWN",
+      "summary": "Phoenix 27: the gold is carried down the steps, taken, just like that.",
+      "tags": [
+        "Phoenix",
+        "plunder"
+      ],
+      "phoenixYear": -169,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": -31,
+      "yearEnd": null,
+      "title": "JUDEA AND ACTIUM",
+      "summary": "Phoenix 28: an earthquake in Judea and Actium burning on the same water, the same spring.",
+      "tags": [
+        "Phoenix",
+        "earthquake",
+        "battle"
+      ],
+      "phoenixYear": -31,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 34,
+      "yearEnd": null,
+      "title": "THE BENNU",
+      "summary": "Core Claim 14: bird plus disc is the Bennu, the Phoenix. Tacitus reports a phoenix seen in Egypt in 34 AD; Herodotus says it returns every 500 years.",
+      "tags": [
+        "Phoenix",
+        "evidence"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E14"
+    },
+    {
+      "year": 93,
+      "yearEnd": null,
+      "title": "THE GREAT YEAR",
+      "summary": "Engine's NER wheel, 600 years a turn: Josephus writes that the great year completes in 600 years; 5239 to 2239 BC is five turns.",
+      "tags": [
+        "NER",
+        "cipher",
+        "Great Year"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K05"
+    },
+    {
+      "year": 107,
+      "yearEnd": null,
+      "title": "THE WRONG SUN",
+      "summary": "Phoenix 29: every face turned up at the wrong sun; the sky counts cycles.",
+      "tags": [
+        "Phoenix",
+        "sun"
+      ],
+      "phoenixYear": 107,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 139,
+      "yearEnd": null,
+      "title": "THE SOTHIC RETURN",
+      "summary": "Normal MSRF set (1461): Censorinus records a new Sothic period in 139 AD when Sirius rose with the sun on 1 Thoth.",
+      "tags": [
+        "cipher",
+        "Sothic"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K14"
+    },
+    {
+      "year": 245,
+      "yearEnd": null,
+      "title": "CARTS AT THE GATE",
+      "summary": "Phoenix 30: the carts of the dead at the gate; it always follows the sky (transcript: 'Plagefolos').",
+      "tags": [
+        "Phoenix",
+        "plague"
+      ],
+      "phoenixYear": 245,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 383,
+      "yearEnd": null,
+      "title": "A TIMESTAMP",
+      "summary": "Phoenix 31: the northern sky burns; they will call it an omen, but it is a timestamp.",
+      "tags": [
+        "Phoenix",
+        "sky-fire"
+      ],
+      "phoenixYear": 383,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json; ere-we-were-remotion/stations.json K03 (384 AD)"
+    },
+    {
+      "year": 521,
+      "yearEnd": null,
+      "title": "LIGHT WITHOUT BRIGHTNESS",
+      "summary": "Phoenix 32: a sun with light but no brightness, frosts in summer; thirty-two down, eleven left.",
+      "tags": [
+        "Phoenix",
+        "dim sun",
+        "cold"
+      ],
+      "phoenixYear": 521,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 659,
+      "yearEnd": null,
+      "title": "THE CAMELS KNOW",
+      "summary": "Phoenix 33, a quiet one: the sun dim enough to look at; the camels know before we do.",
+      "tags": [
+        "Phoenix",
+        "dim sun"
+      ],
+      "phoenixYear": 659,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 797,
+      "yearEnd": null,
+      "title": "DRAGONS, THEY WROTE",
+      "summary": "Phoenix 34: fire in the sky over the monastery; they wrote 'dragons' instead of the date.",
+      "tags": [
+        "Phoenix",
+        "sky-fire"
+      ],
+      "phoenixYear": 797,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 935,
+      "yearEnd": null,
+      "title": "ELDGJA",
+      "summary": "Phoenix 35: Iceland splits open, fire for months, and the sun goes pale over Europe.",
+      "tags": [
+        "Phoenix",
+        "volcano"
+      ],
+      "phoenixYear": 935,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1050,
+      "yearEnd": null,
+      "title": "THE KINGFISHER",
+      "summary": "Core Claim 15: the bird plucking a fish carries one meaning from Cyprus to Nazca to New Mexico (Mimbres bowls, c. 1000-1130 AD).",
+      "tags": [
+        "evidence",
+        "motif"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E15"
+    },
+    {
+      "year": 1073,
+      "yearEnd": null,
+      "title": "EMPTY SCAFFOLDS",
+      "summary": "Phoenix 36: a cathedral half built, scaffolds empty; they will finish it and forget why they stopped.",
+      "tags": [
+        "Phoenix"
+      ],
+      "phoenixYear": 1073,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1211,
+      "yearEnd": null,
+      "title": "SOMETIMES MEN",
+      "summary": "Phoenix 37: the plain is full of horsemen; sometimes the sky sends men.",
+      "tags": [
+        "Phoenix",
+        "invasion"
+      ],
+      "phoenixYear": 1211,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1314,
+      "yearEnd": null,
+      "title": "THE DARK ONE'S LOOP",
+      "summary": "Engine's Nemesis wheel, 792 years: steps from 3439 BC reach 522, 1314 and 2106 AD; the Great Famine's unrelenting rains begin in spring 1315.",
+      "tags": [
+        "Nemesis",
+        "famine",
+        "rain"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K04"
+    },
+    {
+      "year": 1349,
+      "yearEnd": null,
+      "title": "TWICE NINETEEN",
+      "summary": "Phoenix 38 (twice 19): a stinking mist out of the east, and then the dying.",
+      "tags": [
+        "Phoenix",
+        "mist",
+        "death"
+      ],
+      "phoenixYear": 1349,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1487,
+      "yearEnd": null,
+      "title": "DRUMS ON THE TEMPLE",
+      "summary": "Phoenix 39: drums on the temple; listen to the rhythm, they are counting it too.",
+      "tags": [
+        "Phoenix"
+      ],
+      "phoenixYear": 1487,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1625,
+      "yearEnd": null,
+      "title": "CROSSES ON THE DOORS",
+      "summary": "Phoenix 40: crosses on the doors, a lantern in the fog; three to go.",
+      "tags": [
+        "Phoenix"
+      ],
+      "phoenixYear": 1625,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1722,
+      "yearEnd": null,
+      "title": "THE UNFINISHED",
+      "summary": "Core Claim 8: work at the moai quarry, Baalbek and Aswan stopped at once in 1687 BC. Roggeveen sights Rapa Nui; ~400 moai remain in Rano Raraku.",
+      "tags": [
+        "evidence",
+        "quarry"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E08"
+    },
+    {
+      "year": 1763,
+      "yearEnd": null,
+      "title": "NINETEEN GUNS",
+      "summary": "Phoenix 41: cannon on the quay firing at a sky like a dying coal.",
+      "tags": [
+        "Phoenix",
+        "sky"
+      ],
+      "phoenixYear": 1763,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1837,
+      "yearEnd": null,
+      "title": "NO KING, NO BODY",
+      "summary": "They called it the King's Chamber, but there was no king and no body: call it the upper chamber.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1837,
+      "yearEnd": null,
+      "title": "IT RINGS",
+      "summary": "'Sarcophagus' means flesh-eater, yet it never ate anyone: a granite coffer that rings when struck.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1845,
+      "yearEnd": null,
+      "title": "THE BUCKET & THE CONE",
+      "summary": "Core Claim 12: the 'handbag' is a bucket and the 'pine cone' the palm, badges of the apkallu's office. Layard opens Nimrud.",
+      "tags": [
+        "evidence",
+        "apkallu"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E12"
+    },
+    {
+      "year": 1864,
+      "yearEnd": null,
+      "title": "THE TABLETS",
+      "summary": "Core Claim 4: rongorongo is used to date Easter Island young. Eyraud first reports the tablets; one dated in 2024 to the 15th century.",
+      "tags": [
+        "evidence",
+        "writing"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E04"
+    },
+    {
+      "year": 1865,
+      "yearEnd": null,
+      "title": "THROUGH SOLID ROCK",
+      "summary": "345 feet at 26 degrees 31 minutes, through solid rock.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1865,
+      "yearEnd": null,
+      "title": "THE MERIDIAN WINK",
+      "summary": "The Resonance Clock's wink sits on the Giza meridian: apex at 29.9792 N echoes light's 299,792,458 m/s; Piazzi Smyth surveys the pyramid.",
+      "tags": [
+        "cipher",
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K16"
+    },
+    {
+      "year": 1881,
+      "yearEnd": null,
+      "title": "WHEN THE STONE STOPS BREATHING",
+      "summary": "He measures at night when the stone stops breathing, to a thousandth of an inch, never bettered.",
+      "tags": [
+        "Great Pyramid",
+        "measurement"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1890,
+      "yearEnd": null,
+      "title": "THE VORTEX IS 1089",
+      "summary": "The Vortex MSRF set (21.7, 32.6, 43.5...) is 1089 in disguise, the reversal constant; 1089 x 9 = 9801.",
+      "tags": [
+        "cipher"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K12"
+    },
+    {
+      "year": 1898,
+      "yearEnd": null,
+      "title": "THE SCORPION KING",
+      "summary": "Core Claim 18: the scorpion is protection, never a threat (Serket, the Girtablilu). Scorpion Macehead found at Hierakonpolis.",
+      "tags": [
+        "evidence",
+        "motif"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E18"
+    },
+    {
+      "year": 1902,
+      "yearEnd": null,
+      "title": "RED MUD / SHADOW LEAVES THE CIRCLE",
+      "summary": "Phoenix 42, AM 5796, last documented step: Mont Pelee erases Saint-Pierre (8 May); red mud, 'the harvest begins'; chronoliths end. 1902 + 138 = 2040.",
+      "tags": [
+        "Phoenix",
+        "volcano",
+        "red mud",
+        "chronolith"
+      ],
+      "phoenixYear": 1902,
+      "source": "chronologists-machine/src/data/stations.json M11; ere-we-were-remotion/stations.json K02; films/data/AllClips_Chyrons_v1.json RED MUD; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 1915,
+      "yearEnd": null,
+      "title": "THE FAT GODDESS",
+      "summary": "Core Claim 6: Malta's Tarxien repeats Gobekli Tepe's enclosures, relief technique and goddess. Zammit excavates 1915-1919.",
+      "tags": [
+        "evidence"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E06"
+    },
+    {
+      "year": 1919,
+      "yearEnd": null,
+      "title": "19 · 91 · 138 · 831",
+      "summary": "Closing sequence: 19 x 91 = 1,729 (Hardy's taxi to Ramanujan); 138 + 831 = 969, Methuselah's years.",
+      "tags": [
+        "cipher"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K15"
+    },
+    {
+      "year": 1922,
+      "yearEnd": null,
+      "title": "THE KING LIST",
+      "summary": "Core Claim 13: Enki = Etana = Enoch, who left earth on a winged object leaving seven apkallu. Weld-Blundell Prism names Etana who ascended.",
+      "tags": [
+        "evidence",
+        "Enoch"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E13"
+    },
+    {
+      "year": 1930,
+      "yearEnd": null,
+      "title": "THE CAGED SUN",
+      "summary": "Core Claim 17: the Ashanti tale of the bird that brought the sun encodes the vapour-canopy sky; Rattray publishes it.",
+      "tags": [
+        "evidence",
+        "sky"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E17"
+    },
+    {
+      "year": 1932,
+      "yearEnd": null,
+      "title": "THE BENNETT MONOLITH",
+      "summary": "Core Claim 9: Tiwanaku repeats the folded-finger pose, T-face and bucket-holding figures. Bennett unearths a 7.3 m monolith.",
+      "tags": [
+        "evidence"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E09"
+    },
+    {
+      "year": 1932,
+      "yearEnd": null,
+      "title": "THE COMPARISON",
+      "summary": "Core Claim 11: Hittite eyes, boustrophedon rows and rongorongo signs match Indus seals; de Hevesy's comparison read to the Academie.",
+      "tags": [
+        "evidence",
+        "writing"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E11"
+    },
+    {
+      "year": 1952,
+      "yearEnd": 1958,
+      "title": "THE TRENCH",
+      "summary": "Core Claim 2: Kenyon's Pre-Pottery Neolithic scheme frames all Near-Eastern dating; she digs Jericho 1952-1958.",
+      "tags": [
+        "evidence"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E02"
+    },
+    {
+      "year": 1959,
+      "yearEnd": null,
+      "title": "OPH_CRV",
+      "summary": "Engine constant OPH_CRV = 5.08 (curvature) = 3.14 x 1.618, also exactly two inches in cm since the inch was fixed at 25.4 mm.",
+      "tags": [
+        "cipher"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K09"
+    },
+    {
+      "year": 1961,
+      "yearEnd": 1965,
+      "title": "THE VULTURE SHRINE",
+      "summary": "Core Claim 19: the vulture is the phoenix; Neolithic head removal is soul-rescue, not violence. Mellaart's Catalhoyuk vulture murals.",
+      "tags": [
+        "evidence",
+        "Phoenix"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E19"
+    },
+    {
+      "year": 1963,
+      "yearEnd": null,
+      "title": "THE DOOR IN THE WALL",
+      "summary": "Core Claim 10: kivas, the sipapu, King Annacus and the underground cities; a wall knocked through opens Derinkuyu.",
+      "tags": [
+        "evidence",
+        "underground"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E10"
+    },
+    {
+      "year": 1972,
+      "yearEnd": null,
+      "title": "THE CROW IN THE SUN",
+      "summary": "Core Claim 16: crows and ravens are sun-darkening (three-legged crow, Hou Yi, Amaterasu). Lady Dai's banner shows a crow in the sun.",
+      "tags": [
+        "evidence",
+        "sun"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E16"
+    },
+    {
+      "year": 1995,
+      "yearEnd": null,
+      "title": "THE FIRST SEASON",
+      "summary": "Core Claim 1: the sites are underground because of cataclysm, not deliberate burial. Schmidt opens Gobekli Tepe under up to 15 m of fill.",
+      "tags": [
+        "evidence",
+        "cataclysm"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E01"
+    },
+    {
+      "year": 2007,
+      "yearEnd": null,
+      "title": "THE JADE PIG",
+      "summary": "Core Claim 7: Lingjiatan and Liangzhu repeat the boar, mouth style and animal poses, 5,000 years younger; an 88 kg jade pig over tomb 07M23.",
+      "tags": [
+        "evidence"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E07"
+    },
+    {
+      "year": 2017,
+      "yearEnd": null,
+      "title": "THE SEALED HOLLOW",
+      "summary": "A sealed hollow the length of the gallery, still keeping records we cannot read yet.",
+      "tags": [
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "year": 2023,
+      "yearEnd": null,
+      "title": "THE SEATED MAN",
+      "summary": "Core Claim 5: Karahan Tepe carries an apkallu supporting a winged disc. A 2.3 m seated man and a vulture statue announced September 2023.",
+      "tags": [
+        "evidence",
+        "apkallu"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json E05"
+    },
+    {
+      "year": 2023,
+      "yearEnd": null,
+      "title": "THIRTY-TWO YEARS TO THE DAY",
+      "summary": "19 January 2023: entering the Great Pyramid, 'thirty-two years to the day'; start of the 1,656-day (138 x 12) span to the 2 August 2027 eclipse.",
+      "tags": [
+        "Great Pyramid",
+        "personal"
+      ],
+      "phoenixYear": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json; codex/PhoenixCODEX138_Palindromic.txt line 6"
+    },
+    {
+      "year": 2026,
+      "yearEnd": null,
+      "title": "THE CAST",
+      "summary": "Manual's worked cast: X1 4 Jul 2026, X2 20 Aug, Y 47 days; operation 9 (X2 + Y x phi) lands on 4 November 2026.",
+      "tags": [
+        "cipher",
+        "engine"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K10"
+    },
+    {
+      "year": 2026,
+      "yearEnd": null,
+      "title": "THE HEPTA-CYCLE",
+      "summary": "OPH_HEP = 7.01: seven Metonics (133) fall five short of a Phoenix (138); the missing capstone is the fifth corner.",
+      "tags": [
+        "cipher",
+        "Metonic",
+        "Great Pyramid"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K11"
+    },
+    {
+      "year": 2026,
+      "yearEnd": null,
+      "title": "THE SIX WHEELS",
+      "summary": "Resonance Clock: Metonic 19, Phoenix 138, NER 600, Nemesis 792, baktun, sar; 19 & 138 mesh at 2,622, 138 & 600 at 13,800, 138 & 792 at 18,216.",
+      "tags": [
+        "cipher",
+        "Phoenix",
+        "Nemesis"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K17"
+    },
+    {
+      "year": 2026,
+      "yearEnd": null,
+      "title": "TODAY HAS NINETEEN NAMES",
+      "summary": "26 September 2026 in nineteen calendars, including 15 Tishri 5787, Long Count 13.0.13.17.7, and 5920 AM by Chronicon.",
+      "tags": [
+        "cipher",
+        "calendar"
+      ],
+      "phoenixYear": null,
+      "source": "ere-we-were-remotion/stations.json K19"
+    }
+  ],
+  "witnesses": [
+    {
+      "name": "Natori",
+      "era": "Narrator/walker in the films (co-author credit: Natori Saira Evren)",
+      "year": null,
+      "testimony": "Walks every station and speaks its date; on 2040 says 'This is the one I haven't seen.'",
+      "eventRefs": [
+        "THE GREAT FLOOD",
+        "RED MUD / SHADOW LEAVES THE CIRCLE",
+        "THERA"
+      ],
+      "source": "chronologists-machine/src/data/stations.json; ere-we-were-remotion/stations.json (natori lines); films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "name": "Rogue",
+      "era": "Narrator/walker in the films (Bradley Rogue)",
+      "year": null,
+      "testimony": "Second voice at each station; answers on 2040 'I have.' and is told 'Someone watched. You.' at Thera.",
+      "eventRefs": [
+        "THERA",
+        "THE MEDO-LYDIAN DARK"
+      ],
+      "source": "chronologists-machine/src/data/stations.json; ere-we-were-remotion/stations.json (rogue lines); films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "name": "The Chronologist (Codex)",
+      "era": "Character in the Phoenix CODEX",
+      "year": null,
+      "testimony": "Gives the margin for the next fire: as early as 2039, as late as 2046 for the worst of it (projection, see projections 2039/2040/2046).",
+      "eventRefs": [],
+      "source": "chronologists-machine/src/data/stations.json M12"
+    },
+    {
+      "name": "Bradley Rogue (addressed as 'you')",
+      "era": "Author; Egypt trip",
+      "year": 2023,
+      "testimony": "Entered the Great Pyramid the morning of 19 January 2023; returning under the 2 August 2027 Luxor eclipse, 1,656 days later.",
+      "eventRefs": [
+        "THIRTY-TWO YEARS TO THE DAY"
+      ],
+      "source": "codex/PhoenixCODEX138_Palindromic.txt line 6"
+    },
+    {
+      "name": "Jason Breshears",
+      "era": "Archaix / Chronicon author",
+      "year": null,
+      "testimony": "His Chronicon and charts supply the chronology (5239 BC count, 3895 BC Year One, Phoenix 138, Nemesis 792); 'Jason's charts call it worldwide' (1963 BC).",
+      "eventRefs": [
+        "THE GROUND REMEMBERS",
+        "YEAR ONE"
+      ],
+      "source": "README.md; chronologists-machine/src/data/stations.json M01-M02, M11; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "name": "Thales",
+      "era": "Ancient (Herodotus 1.74)",
+      "year": null,
+      "testimony": "Foretold the eclipse that stopped the Medo-Lydian battle on the Halys; the film says he did not predict it, he remembered.",
+      "eventRefs": [
+        "THE MEDO-LYDIAN DARK"
+      ],
+      "source": "ere-we-were-remotion/stations.json F04; chronologists-machine/src/data/stations.json M10; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "name": "Herodotus",
+      "era": "Ancient (Histories)",
+      "year": null,
+      "testimony": "Records day becoming night mid-battle and both sides making peace (1.74); records the phoenix returning to Heliopolis every 500 years (2.73).",
+      "eventRefs": [
+        "THE MEDO-LYDIAN DARK",
+        "THE BENNU"
+      ],
+      "source": "chronologists-machine/src/data/stations.json M10; ere-we-were-remotion/stations.json F04, E14"
+    },
+    {
+      "name": "Tacitus",
+      "era": "Ancient (Annals 6.28)",
+      "year": 34,
+      "testimony": "Reports a phoenix seen in Egypt in 34 AD and discusses a cycle of 1,461 years.",
+      "eventRefs": [
+        "THE BENNU"
+      ],
+      "source": "ere-we-were-remotion/stations.json E14"
+    },
+    {
+      "name": "Josephus",
+      "era": "Ancient (Antiquities 1.3.9)",
+      "year": 93,
+      "testimony": "Says the patriarchs lived six hundred years because 'the great year is completed in that interval'.",
+      "eventRefs": [
+        "THE GREAT YEAR",
+        "THE FIRST FIRE / THE GREAT YEAR BEGINS"
+      ],
+      "source": "ere-we-were-remotion/stations.json K05, C01"
+    },
+    {
+      "name": "Meton of Athens",
+      "era": "Ancient Athens",
+      "year": -432,
+      "testimony": "Set up a sun-tracker on the Pnyx and announced the nineteen-year cycle: 19 years hold 235 moons.",
+      "eventRefs": [
+        "NINETEEN YEARS, TWO HUNDRED THIRTY-FIVE MOONS"
+      ],
+      "source": "ere-we-were-remotion/stations.json K01"
+    },
+    {
+      "name": "Varro",
+      "era": "Ancient (quoted by Censorinus)",
+      "year": null,
+      "testimony": "Dates the flood of Ogyges to about 1600 BC.",
+      "eventRefs": [
+        "THE FLOOD OF OGYGES"
+      ],
+      "source": "ere-we-were-remotion/stations.json F02; chronologists-machine/src/data/stations.json M09"
+    },
+    {
+      "name": "Julius Africanus",
+      "era": "Ancient chronographer",
+      "year": null,
+      "testimony": "Dates the flood of Ogyges c. 1796 BC.",
+      "eventRefs": [
+        "THE FLOOD OF OGYGES"
+      ],
+      "source": "chronologists-machine/src/data/stations.json M09 (check)"
+    },
+    {
+      "name": "Censorinus",
+      "era": "Ancient (De Die Natali 21)",
+      "year": 238,
+      "testimony": "Records that a new Sothic period began in 139 AD when Sirius rose with the sun on 1 Thoth; quotes Varro on Ogyges.",
+      "eventRefs": [
+        "THE SOTHIC RETURN",
+        "THE FLOOD OF OGYGES"
+      ],
+      "source": "ere-we-were-remotion/stations.json K14, F02"
+    },
+    {
+      "name": "Plato",
+      "era": "Ancient (Timaeus 25c-d)",
+      "year": null,
+      "testimony": "Has Atlantis sink in a single day and night.",
+      "eventRefs": [
+        "THE AXIS"
+      ],
+      "source": "ere-we-were-remotion/stations.json F03"
+    },
+    {
+      "name": "Xenophon",
+      "era": "Ancient (Anabasis 4.5.25)",
+      "year": -401,
+      "testimony": "Described Anatolian houses dug underground.",
+      "eventRefs": [
+        "THE DOOR IN THE WALL"
+      ],
+      "source": "ere-we-were-remotion/stations.json E10"
+    },
+    {
+      "name": "Berossus",
+      "era": "Ancient (via Syncellus)",
+      "year": null,
+      "testimony": "Gives the ten kings before the Flood 120 sars, 432,000 years.",
+      "eventRefs": [
+        "THE ŠAR"
+      ],
+      "source": "ere-we-were-remotion/stations.json K06"
+    },
+    {
+      "name": "Manetho",
+      "era": "Ancient (via Syncellus)",
+      "year": null,
+      "testimony": "His 'Old Chronicle' spans 36,525 years, twenty-five Sothic cycles of 1,461.",
+      "eventRefs": [
+        "THE BLACK AGE"
+      ],
+      "source": "ere-we-were-remotion/stations.json C11"
+    },
+    {
+      "name": "Aryabhata",
+      "era": "Ancient Indian astronomer",
+      "year": null,
+      "testimony": "His reckoning puts the Kali Yuga epoch at 17/18 February 3102 BC, ten years after the Long Count zero.",
+      "eventRefs": [
+        "THE BLACK AGE"
+      ],
+      "source": "ere-we-were-remotion/stations.json C11"
+    },
+    {
+      "name": "Enoch",
+      "era": "Antediluvian (Jubilees 4:17; 1 Enoch 72-82)",
+      "year": null,
+      "testimony": "First to write down the signs of heaven by the order of their months; a 364-day year. Chronicon makes him a king whose 3rd year is a Phoenix pass.",
+      "eventRefs": [
+        "ENOCH'S THIRD YEAR",
+        "THE KING LIST"
+      ],
+      "source": "ere-we-were-remotion/stations.json C08, E13"
+    },
+    {
+      "name": "Khufu (per the stela)",
+      "era": "Old Kingdom Egypt",
+      "year": -2560,
+      "testimony": "The stela says Khufu found the monuments already there, repairing the Sphinx, not carving it.",
+      "eventRefs": [
+        "KHUFU FOUND THEM"
+      ],
+      "source": "films/data/AllClips_Chyrons_v1.json; films/data/AllClips_Transcripts_v2.json"
+    },
+    {
+      "name": "James Ussher",
+      "era": "Annales Veteris Testamenti (1650)",
+      "year": 1650,
+      "testimony": "Put creation at 4004 BC, which Chronicon calls 109 years off.",
+      "eventRefs": [
+        "THE CAPTURE OF LUNA",
+        "YEAR ONE"
+      ],
+      "source": "ere-we-were-remotion/stations.json C03, C04; chronologists-machine/src/data/stations.json M03"
+    },
+    {
+      "name": "Klaus Schmidt",
+      "era": "German Archaeological Institute",
+      "year": 1995,
+      "testimony": "Recognised the T-pillars in 1994 and opened excavation of Gobekli Tepe in 1995; enclosures under up to 15 m of fill.",
+      "eventRefs": [
+        "THE FIRST SEASON"
+      ],
+      "source": "ere-we-were-remotion/stations.json E01"
+    },
+    {
+      "name": "Lee Clare",
+      "era": "German Archaeological Institute",
+      "year": 2018,
+      "testimony": "With colleagues, since 2018 questions the deliberate-backfill reading of Gobekli Tepe, proposing slope-slide and natural infill.",
+      "eventRefs": [
+        "THE FIRST SEASON"
+      ],
+      "source": "ere-we-were-remotion/stations.json E01"
+    },
+    {
+      "name": "Kathleen Kenyon",
+      "era": "Archaeologist, Jericho",
+      "year": 1952,
+      "testimony": "Dug Tell es-Sultan 1952-1958 and defined the Pre-Pottery Neolithic A and B phases.",
+      "eventRefs": [
+        "THE TRENCH"
+      ],
+      "source": "ere-we-were-remotion/stations.json E02"
+    },
+    {
+      "name": "Brother Eugène Eyraud",
+      "era": "Missionary, Rapa Nui",
+      "year": 1864,
+      "testimony": "His December 1864 letter is the first report of the rongorongo tablets.",
+      "eventRefs": [
+        "THE TABLETS"
+      ],
+      "source": "ere-we-were-remotion/stations.json E04"
+    },
+    {
+      "name": "Necmi Karul",
+      "era": "Archaeologist, Karahan Tepe",
+      "year": 2023,
+      "testimony": "Leads excavation since 2019; team announced a 2.3 m seated man and life-size vulture statue in September 2023.",
+      "eventRefs": [
+        "THE SEATED MAN"
+      ],
+      "source": "ere-we-were-remotion/stations.json E05"
+    },
+    {
+      "name": "Themistocles Zammit",
+      "era": "Archaeologist, Malta",
+      "year": 1915,
+      "testimony": "Excavated the Tarxien temples 1915-1919 after farmers struck the stones in 1913.",
+      "eventRefs": [
+        "THE FAT GODDESS"
+      ],
+      "source": "ere-we-were-remotion/stations.json E06"
+    },
+    {
+      "name": "Jacob Roggeveen",
+      "era": "Dutch navigator",
+      "year": 1722,
+      "testimony": "Sighted Rapa Nui on Easter Sunday, 5 April 1722, a hill full of half-cut giants.",
+      "eventRefs": [
+        "THE UNFINISHED"
+      ],
+      "source": "ere-we-were-remotion/stations.json E08"
+    },
+    {
+      "name": "Wendell C. Bennett",
+      "era": "Archaeologist, Tiwanaku",
+      "year": 1932,
+      "testimony": "Unearthed the 7.3 m monolith holding a kero beaker and snuff tablet in the semi-subterranean temple.",
+      "eventRefs": [
+        "THE BENNETT MONOLITH"
+      ],
+      "source": "ere-we-were-remotion/stations.json E09"
+    },
+    {
+      "name": "Guillaume de Hevesy",
+      "era": "Scholar, Paris",
+      "year": 1932,
+      "testimony": "Compared rongorongo signs with Indus Valley seal signs; read to the Academie by Paul Pelliot; later rejected but on record.",
+      "eventRefs": [
+        "THE COMPARISON"
+      ],
+      "source": "ere-we-were-remotion/stations.json E11"
+    },
+    {
+      "name": "Paul Pelliot",
+      "era": "Scholar, Paris",
+      "year": 1932,
+      "testimony": "Read de Hevesy's rongorongo-Indus paper to the Academie des Inscriptions in September 1932.",
+      "eventRefs": [
+        "THE COMPARISON"
+      ],
+      "source": "ere-we-were-remotion/stations.json E11"
+    },
+    {
+      "name": "Austen Henry Layard",
+      "era": "Excavator, Nimrud",
+      "year": 1845,
+      "testimony": "Began digging Nimrud in November 1845, uncovering apkallu reliefs carrying the bucket and cone.",
+      "eventRefs": [
+        "THE BUCKET & THE CONE"
+      ],
+      "source": "ere-we-were-remotion/stations.json E12"
+    },
+    {
+      "name": "Langdon",
+      "era": "Oxford Assyriologist",
+      "year": 1923,
+      "testimony": "Published the Weld-Blundell Prism naming Etana of Kish, 'who ascended to heaven'.",
+      "eventRefs": [
+        "THE KING LIST"
+      ],
+      "source": "ere-we-were-remotion/stations.json E13"
+    },
+    {
+      "name": "R. S. Rattray",
+      "era": "Government anthropologist, Gold Coast",
+      "year": 1930,
+      "testimony": "Published Akan-Ashanti Folk-Tales with the tale of the bird that brought the sun.",
+      "eventRefs": [
+        "THE CAGED SUN"
+      ],
+      "source": "ere-we-were-remotion/stations.json E17"
+    },
+    {
+      "name": "Quibell and Green",
+      "era": "Excavators, Hierakonpolis",
+      "year": 1898,
+      "testimony": "Found the Scorpion Macehead in the Main Deposit in 1897-98.",
+      "eventRefs": [
+        "THE SCORPION KING"
+      ],
+      "source": "ere-we-were-remotion/stations.json E18"
+    },
+    {
+      "name": "James Mellaart",
+      "era": "Excavator, Catalhoyuk",
+      "year": 1961,
+      "testimony": "Exposed vulture wall paintings over headless figures in Level VII, 1961-65.",
+      "eventRefs": [
+        "THE VULTURE SHRINE"
+      ],
+      "source": "ere-we-were-remotion/stations.json E19"
+    },
+    {
+      "name": "Tom Ray",
+      "era": "Nature 337 (1989)",
+      "year": 1989,
+      "testimony": "Showed Newgrange's roof-box aimed at winter-solstice sunrise as it stood c. 3150 BC.",
+      "eventRefs": [
+        "NEWGRANGE"
+      ],
+      "source": "ere-we-were-remotion/stations.json C09"
+    },
+    {
+      "name": "Zecharia Sitchin",
+      "era": "The 12th Planet (1976)",
+      "year": 1976,
+      "testimony": "Found a cataclysm in Sumerian records that Chronicon matches to the 2653 BC Phoenix pass.",
+      "eventRefs": [
+        "THE SUMERIAN CATASTROPHE"
+      ],
+      "source": "ere-we-were-remotion/stations.json C16"
+    },
+    {
+      "name": "Richard Muller (with Davis and Hut)",
+      "era": "Nature 308 (1984); Nemesis (1988)",
+      "year": 1984,
+      "testimony": "Proposed Nemesis, a dark solar companion, which Chronicon cites by page.",
+      "eventRefs": [
+        "SHADOW ENTERS THE CIRCLE / THE DAYSTAR GOES DARK"
+      ],
+      "source": "ere-we-were-remotion/stations.json C02"
+    },
+    {
+      "name": "Flinders Petrie",
+      "era": "Survey of Giza (1883)",
+      "year": 1883,
+      "testimony": "Measured the slope at 51 deg 52' +/- 2', mean side 9,068.8 in, design height 5,776 in.",
+      "eventRefs": [
+        "THE ALTAR IS BEGUN",
+        "THE ALTAR IS FINISHED",
+        "OPH_PI",
+        "OPH_PHI"
+      ],
+      "source": "ere-we-were-remotion/stations.json C14, C15, K07, K08"
+    },
+    {
+      "name": "Charles Piazzi Smyth",
+      "era": "Surveyor of the Great Pyramid",
+      "year": 1865,
+      "testimony": "Surveyed the pyramid January-April 1865 and argued for a prime meridian through Giza; his school gave ~5,449 in height without apex.",
+      "eventRefs": [
+        "THE MERIDIAN WINK",
+        "THE FIRST CYCLE CLOSES"
+      ],
+      "source": "ere-we-were-remotion/stations.json K16, C07"
+    },
+    {
+      "name": "Graham Hancock",
+      "era": "Fingerprints of the Gods (1995)",
+      "year": 1995,
+      "testimony": "Quotes the pyramid's base perimeter as 3,023.16 feet.",
+      "eventRefs": [
+        "THE ALTAR IS FINISHED"
+      ],
+      "source": "ere-we-were-remotion/stations.json C15"
+    },
+    {
+      "name": "G. H. Hardy and Srinivasa Ramanujan",
+      "era": "Putney, 1919",
+      "year": 1919,
+      "testimony": "Hardy's taxi 1,729 (= 19 x 91), the smallest number that is two sums of two cubes.",
+      "eventRefs": [
+        "19 · 91 · 138 · 831"
+      ],
+      "source": "ere-we-were-remotion/stations.json K15"
+    }
+  ],
+  "projections": [
+    {
+      "year": 2027,
+      "label": "Total solar eclipse over Luxor, 2 August 2027",
+      "cycleIndex": null,
+      "source": "codex/PhoenixCODEX138_Palindromic.txt line 6",
+      "note": "1,656 days (138 x 12) after entering the Great Pyramid on 19 January 2023; 'the third return'. Not a Phoenix year."
+    },
+    {
+      "year": 2039,
+      "label": "Earliest margin for the next fire",
+      "cycleIndex": null,
+      "source": "chronologists-machine/src/data/stations.json M12",
+      "note": "The Codex's Chronologist: 'as early as 2039'."
+    },
+    {
+      "year": 2040,
+      "label": "AM 5934 - PHOENIX 43 · 138 × 43 - THE ONE SHE HASN'T SEEN / FIRE AGAIN",
+      "cycleIndex": 43,
+      "source": "films/data/AllClips_Chyrons_v1.json; chronologists-machine/src/data/stations.json M12; ere-we-were-remotion/stations.json K02, K18; codex/PhoenixCODEX138.txt line 1140-1144; films/data/AllClips_Transcripts_v2.json",
+      "note": "1902 + 138. Site countdown targets 2040-05-16T00:00:00Z; film transcript says 'May 17th, 2040'. Pyramid chyron for 2040: IT DOESN'T EXPLAIN IT."
+    },
+    {
+      "year": 2046,
+      "label": "Latest margin / Long Count closure",
+      "cycleIndex": null,
+      "source": "chronologists-machine/src/data/stations.json M12; ere-we-were-remotion/stations.json C10, K18",
+      "note": "'as late as 2046 for the worst of it'; Chronicon's count-closure year for the Long Count read in days."
+    },
+    {
+      "year": 2106,
+      "label": "AM 6000 - THE CAPSTONE",
+      "cycleIndex": null,
+      "source": "films/data/AllClips_Chyrons_v1.json; ere-we-were-remotion/stations.json K18, K04, C01, C04; chronologists-machine/src/data/stations.json M01; films/data/AllClips_Transcripts_v2.json",
+      "note": "6000 AM by AD = AM - 3894; 7,344 years from 5239 BC; Nemesis 792 loop from 3439 BC lands here; 'Year one. Again.' Not a 138-multiple."
+    },
+    {
+      "year": 2178,
+      "label": "2040 + 138 - Sky Dragon endpoint",
+      "cycleIndex": 44,
+      "source": "ere-we-were-remotion/stations.json K18",
+      "note": "PSYFR page's Sky Dragon endpoint; cycleIndex 44 is implied by 2040 + 138, not stated as 'Phoenix 44'."
+    }
+  ],
+  "openQuestions": [
+    "codex/PhoenixCODEX138.txt (the named 'main source', 65 KB) is not working notes: it is the HTML of the 'Bradley Rogue Ventures' portfolio page. Its only cycle data is the Phoenix countdown to 2040-05-16. README calls it 'working notes', so the wrong file may be checked in. Nearly all data here comes from the two stations.json files and films/data chyrons/transcripts.",
+    "The year-conversion rule changes between sources, giving off-by-one years. Chyrons give Phoenix 4/5/6/9/11 as 3344/3206/3068/2654/2378 BC; the station sheets give 3343/3205/3067/2653/2377 BC (3895 - AM). Phoenix 1 (3757) and 12+ BC match.",
+    "On the AD side, chyrons for Phoenix 29-41 equal AM - 3895 (107, 245, 383, 521 ... 1763). The stated rule AD = AM - 3894 (which 1902/2040/2106 follow) would give 108, 246, 384, 522 ... 1764. Station K03 gives 384 AD for AM 4278, but the chyron says 383.",
+    "4309 BC is called 'Phoenix Year 1' in C02, but C05 calls 3757 BC 'the first Phoenix' and chyrons number Phoenix 1 = AM 138 = 3757 BC.",
+    "2815 BC (pyramid finished) is 1080 AM in C15 but AM 1081 in the chyrons ('OFF-CYCLE').",
+    "Phoenix 2040 date: the site countdown targets 2040-05-16, but the film transcript says 'May 17th, 2040'.",
+    "The Medo-Lydian eclipse: the chart says 583 BC, while the station notes record 585 BC astronomically. The sources call this the book rounding. Ogyges is 1687 BC; the M09 caption reads 1688.",
+    "C10 equates Chronicon's 3113 BCE with astronomical year -3113 (= 3114 BC). That suggests at least some Chronicon BCE labels may be astronomical. This file stores all BC labels as -N with no year zero.",
+    "Transcripts are auto-generated and garbled ('Fails' = Thales?, 'Pilea erases sampier', 'hikesos', 'Kadath', 'Acton', 'Plagefolos', 'Justiny and Sun', 'Harajan', 'A lesion'). Summaries avoid relying on the garbled words; the 245 AD 'plague' tag rests on 'Plagefolos'.",
+    "Nibiru appears only in the portfolio page's word-highlighter, never with a date, so no event is tagged Nibiru.",
+    "Witness scope: people quoted in the 'anchor'/'claim' text are included. Names that appear only as bibliography in 'check' fields (e.g. Hodder, Lehner, Kitchen, Jordan, Nissen) are excluded. The film's unnamed 'Greek' (450 BC) and the 1881 'He measures' figure are left unnamed.",
+    "The station 'check' fields contain mainstream counterpoints (e.g. no global flood layer, dates of Gobekli/Stonehenge). Per instructions these are not used to correct the framework's dates.",
+    "Some station years are nominal display years for undated items (e.g. K11 2026.5, K17 2026.7, K19 2026.74, E11 1932.5). They are rounded down to integers here."
+  ]
+}
